@@ -58,3 +58,26 @@ of those sections to manage the look and feel of the site. */
     text-align: center;
     background: #eee;
 }
+
+.navbar.transparent {
+    border-width: 0px;
+    -webkit-box-shadow: 0px 0px;
+    box-shadow: 1px 1px;
+    background-color: rgba(255, 255, 255, 0.50);
+    backdrop-filter: blur(10px)
+    /*-webkit-filter: blur(10px);*/
+
+}
+
+
+
+
+
+    /*
+    background-color: rgba(0,0,0,0.0);
+    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%,
+                        color-stop( 0% , rgba(0,0,0,0.00)),
+                        color-stop( 100% , rgba(0,0,0,0.00)));
+    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+    */
