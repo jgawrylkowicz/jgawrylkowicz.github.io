@@ -1,0 +1,17 @@
+.phone{
+
+
+
+}
+
+.phone-background{
+    width: 90%;
+    height: 90%;
+    margin-left: 15%;
+    z-index: 1;
+
+}
+
+.phone-display{
+    z-index: 2;
+}
