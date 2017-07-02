@@ -25,7 +25,10 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!--TODO tablet mode + smartphone mode, check for safari compatibility  -->
+    <!--TODO tablet mode + smartphone mode, check for safari compatibility
+     this needs to be done via css
+        https://developer.chrome.com/multidevice/webview/pixelperfect
+     -->
 
 </head>
 
@@ -166,8 +169,8 @@
                                 --->
 
 
-                                <!--
-                                <div class="results"></div>-->
+
+                                <div class="results"></div>
                                 <!--INDICATORS -->
                                 <ol class="phone-indicators">
                                     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -214,7 +217,7 @@
 
         function resizeSection() {
 
-            var width = $(window).width();
+            /*var width = $(window).width();
             var minimumWidth = 337;
             var stepProPixel = 28; // =(751-337)/15
 
@@ -235,7 +238,13 @@
                 //return to standard value
                 $("#projects").height('30%');
             }
-            //$('.results').html(width);
+
+
+            */
+
+            var dpi = window.devicePixelRatio;
+
+            $('.results').html(dpi);
         }
 
         window.onload = resizeSection();
