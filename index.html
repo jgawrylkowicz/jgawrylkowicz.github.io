@@ -25,6 +25,8 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!--TODO tablet mode + smartphone mode, check for safari compatibility  -->
+
 </head>
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
@@ -222,8 +224,7 @@
                     $("#projects").height('65%');
                 }else if (width <= 751 && width >= 338) {
 
-                    var calculatedHeight = 50 + ((width - minimumWidth) / stepProPixel);
-                    var optimizedHeight = parseInt(calculatedHeight);
+                    var calculatedHeight = parseInt( 50 + ((width - minimumWidth) / stepProPixel));
 
                     $("#projects").height(calculatedHeight + '%');
                 }else if (width <= 337) {
