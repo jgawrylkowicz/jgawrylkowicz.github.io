@@ -12,8 +12,10 @@
     <title>Scrolling Nav - Start Bootstrap Template</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -82,7 +84,9 @@
                     <br>
 
 
-                    <div class="col-md-6 col-sm-12 col-xs-12 " >
+                    <div class="col-md-6 col-sm-12 col-xs-12 ">
+
+
                         <div style="text-align: justify;">
 
                             <h3 >Lorem ipsum dolor</h3>
@@ -114,6 +118,9 @@
                                 gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
                             </p>
+                            <!--
+                            <button type="button" class="btn btn-outline-primary btn-lg">More</button>
+                            -->
                         </div>
                     </div>
 
@@ -121,7 +128,13 @@
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="row">
 
-                            <div class="col-sm-12 ">
+                            <div class="col-sm-12 "
+                                 data-aos="fade-down"
+                                 data-aos-easing="ease-in"
+                                 data-aos-delay="150"
+                                 data-aos-duration="900"
+                                 data-aos-once="true">
+
 
                                 <img class="phone phone-background" src="img/google_blue.png" >
 
@@ -189,11 +202,13 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
-
-
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 
     <script>
+        AOS.init();
+    </script>
 
+    <script>
 
         function resizeSection() {
 
