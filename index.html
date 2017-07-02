@@ -27,7 +27,7 @@
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  onresize="resizeSection()" >
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top transparent" role="navigation">
@@ -73,7 +73,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+    <section id="projects" class="projects-section" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -81,8 +81,9 @@
                     <br>
                     <br>
 
-                    <div class="col-sm-6" >
-                        <div class="row" style="text-align: justify;">
+
+                    <div class="col-md-6 col-sm-12 col-xs-12 " >
+                        <div style="text-align: justify;">
 
                             <h3 >Lorem ipsum dolor</h3>
                             <p>
@@ -95,7 +96,6 @@
                                 gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
                             </p>
-
 
                             <h3>Lorem ipsum dolor</h3>
                             <p>
@@ -114,26 +114,55 @@
                                 gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
                             </p>
-
                         </div>
                     </div>
 
 
-
-                    <div class="col-sm-6">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="row">
-                            <div class="span6">
+
+                            <div class="col-sm-12 ">
+
                                 <img class="phone phone-background" src="img/google_blue.png" >
+
                             </div>
+
                         </div>
 
                         <div class="row">
-                            <div class="span6" >
+                            <div class="col-sm-12">
 
-                                <!--slide option -->
+                                <!--
+                                <div class="carousel slide" data-ride="carousel">
+                                    <a class="left phone-control" href="#carousel-example-generic" role="button"
+                                       data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </div>
+
+                                <div class="carousel slide" data-ride="carousel">
+                                    <a class="right phone-control" href="#carousel-example-generic" role="button"
+                                       data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                                --->
+
+
+                                <!--
+                                <div class="results"></div>-->
+                                <!--INDICATORS -->
+                                <ol class="phone-indicators">
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                </ol>
 
                             </div>
                         </div>
+
                     </div>
 
                  </div>
@@ -160,6 +189,45 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
+
+
+
+    <script>
+
+
+        function resizeSection() {
+
+            var width = $(window).width();
+            var minimumWidth = 337;
+            var stepProPixel = 28; // =(751-337)/15
+
+            if (width <= 975) {
+
+                if (width <= 975 && width >= 752) {
+                    $("#projects").height('65%');
+                }else if (width <= 751 && width >= 338) {
+
+                    var calculatedHeight = 50 + ((width - minimumWidth) / stepProPixel);
+                    var optimizedHeight = parseInt(calculatedHeight);
+
+                    $("#projects").height(calculatedHeight + '%');
+                }else if (width <= 337) {
+                    $("#projects").height('50%');
+                }
+
+            }else{
+                //return to standard value
+                $("#projects").height('30%');
+            }
+            //$('.results').html(width);
+        }
+
+        window.onload = resizeSection();
+
+
+
+
+    </script>
 
 </body>
 
