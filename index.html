@@ -133,7 +133,7 @@
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="row">
 
-                            <div class="col-sm-12 "
+                            <div class="col-sm-12"
                                  data-aos="fade-down"
                                  data-aos-easing="ease-in"
                                  data-aos-delay="150"
@@ -216,35 +216,9 @@
     <script>
 
         function resizeSection() {
-
-            /*var width = $(window).width();
-            var minimumWidth = 337;
-            var stepProPixel = 28; // =(751-337)/15
-
-            if (width <= 975) {
-
-                if (width <= 975 && width >= 752) {
-                    $("#projects").height('65%');
-                }else if (width <= 751 && width >= 338) {
-
-                    var calculatedHeight = parseInt( 50 + ((width - minimumWidth) / stepProPixel));
-
-                    $("#projects").height(calculatedHeight + '%');
-                }else if (width <= 337) {
-                    $("#projects").height('50%');
-                }
-
-            }else{
-                //return to standard value
-                $("#projects").height('30%');
-            }
-
-
-            */
-
             var dpi = window.devicePixelRatio;
 
-            $('.results').html(dpi);
+            $('.results').html('dpi: ' + dpi + ' window:' + $(window).width());
         }
 
         window.onload = resizeSection();
