@@ -18,10 +18,12 @@ html {
     border-width: 0px;
     box-shadow: rgba(0, 0, 0, 0.06) 1px 1px;
     background-color: rgba(255, 255, 255, 0.92);
-
-
-
 }
+
+
+
+
+
 /*MDPI*/
 @media screen and (min-resolution: 1dppx) {
     .navbar {
@@ -31,17 +33,14 @@ html {
         transition: background .5s ease-in-out,padding .5s ease-in-out;
     }
 
-    .navbar-default .navbar-nav > .active {
-        color: #000;
-        border-bottom: 3px solid rgba(0, 112, 255, 0.51);
+    .navbar-light .navbar-nav .nav-link{
+        color: rgba(0, 113, 255, 0.50);
     }
 
-    .navbar-default .navbar-nav > .active > a,
-    .navbar-default .navbar-nav > .active > a:hover,
-    .navbar-default .navbar-nav > .active > a:focus {
-        color: #000;
-        background: transparent;
-    }
+    /*
+    TODO underline
+    https://www.bootply.com/rMcva1afiM
+    */
 
 
     .top-nav-collapse {
@@ -84,6 +83,7 @@ html {
 
 
 /*HDPI*/
+/*
 @media screen and (min-resolution: 1.5dppx){
 
     @media (max-width: 575px) {
@@ -103,9 +103,8 @@ html {
     }
 
 
-
-}
-
+}*/
+/*
 @media screen and (min-resolution: 1.75dppx){
 
     @media (max-width: 575px) {
@@ -126,71 +125,5 @@ html {
 
 }
 
-
-/*XHDPI*/
-@media screen and (min-resolution: 2dppx){
-
-    /*mobile version, images removed*/
-    @media (max-width: 575px) {
-        .projects-section {  height: 150%;  }
-        .contact-section {  padding-top: 20px;  }
-    }
-    @media (min-width: 576px) {
-        .projects-section {  height: 165%;  }
-    }
-    @media (min-width: 768px) {
-        .projects-section {  height: 180%;  }
-    }
-    @media (min-width: 992px) {
-        .projects-section {  height: 110%;  }
-    }
-    @media (min-width: 1200px) {
-        .projects-section {  height: 110%;  }
-    }
-
-
-
-}
-
-
-/*
-@media screen and (min-resolution: 1.8dppx){
-
-
-    @media (max-width: 575px) {
-        .projects-section {
-            height: 150%;
-            background: #eedd54;
-        }
-    }
-
-    @media (min-width: 576px) {
-        .projects-section {  height: 165%;  }
-    }
-
-    @media (min-width: 768px) {
-        .projects-section {
-            height: 180%;
-            background: #061eee;
-        }
-    }
-
-    @media (min-width: 992px) {
-        .projects-section {
-            height: 110%;
-            background: #0cee51;
-        }
-    }
-
-    @media (min-width: 1200px) {
-        .projects-section {
-            height: 110%;
-        }
-
-    }
-
-
-
-}
-
 */
+
