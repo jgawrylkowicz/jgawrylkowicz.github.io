@@ -14,39 +14,51 @@ html {
     height: 100%;
 }
 
-.navbar.transparent {
-    border-width: 0px;
-    box-shadow: rgba(0, 0, 0, 0.06) 1px 1px;
-    background-color: rgba(255, 255, 255, 0.92);
-}
-
-
 
 
 
 /*MDPI*/
 @media screen and (min-resolution: 1dppx) {
     .navbar {
+        height: 80px;
         padding: 20px 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
     }
 
+    .navbar.transparent {
+        border-width: 0px;
+        box-shadow: rgba(0, 0, 0, 0.06) 1px 1px;
+        background-color: rgba(255, 255, 255, 0.92);
+    }
+
     .navbar-light .navbar-nav .nav-link{
         color: rgba(0, 113, 255, 0.50);
+        display:-webkit-box;
+        -webkit-box-pack:center;
+        -webkit-box-align:center;
+        height: 80px;
+        border-bottom: 3px solid transparent;
     }
 
-    /*
-    TODO underline
-    https://www.bootply.com/rMcva1afiM
-    */
-
-
-    .top-nav-collapse {
-        padding: 0;
+    .navbar.navbar-light {
+        background-color: #FFFFFF;
+    }
+    .navbar-light .navbar-nav > li > a:hover,
+    .navbar-light .navbar-nav > li > a:focus {
+        border-bottom: 3px solid rgba(0, 113, 255, 0.50);
     }
 
+
+    .navbar-light .navbar-brand{
+        height: 80px;
+        margin-bottom: 8px;
+        display:-webkit-box;
+        -webkit-box-pack:center;
+        -webkit-box-align:center;
+
+    }
 
     /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
     The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
@@ -54,29 +66,27 @@ html {
 
     .intro-section {
         height: 100%;
-        padding-top: 100px;
+        padding-top: 120px;
         text-align: center;
         background: #fff;
     }
 
     .projects-section {
         height: 100%;
-        padding-top: 80px;
+        padding-top: 120px;
         text-align: center;
         background: #eee;
     }
 
     .contact-section {
         height: 100%;
-        padding-top: 100px;
+        padding-top: 120px;
         text-align: center;
         background: #fff;
     }
 
 
 }
-
-
 
 
 /* xs <576 , s >= 576 , m >= 768 , l >= 992, xl >= 1200 */
@@ -104,26 +114,57 @@ html {
 
 
 }*/
-/*
-@media screen and (min-resolution: 1.75dppx){
 
+@media screen and (min-resolution: 2dppx){
+
+    /*navbar for mobile*/
     @media (max-width: 575px) {
-        .projects-section {  height: 150%;  }
+
+        .navbar {
+            height: 60px;
+            padding: 10px 0;
+            -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+            -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+            transition: background .5s ease-in-out,padding .5s ease-in-out;
+        }
+
+        .navbar-light .navbar-nav .nav-link{
+            color: rgba(0, 113, 255, 0.50);
+            display:-webkit-box;
+            -webkit-box-pack:center;
+            -webkit-box-align:center;
+            height: 80px;
+            border-bottom: 0px solid transparent;
+        }
+
+        .navbar.navbar-light {
+            background-color: #FFFFFF;
+        }
+        .navbar-light .navbar-nav > li > a:hover,
+        .navbar-light .navbar-nav > li > a:focus {
+            border-bottom: none;
+        }
+
+        .navbar-light .navbar-brand{
+            height: 40px;
+            margin-bottom: 8px;
+            display:-webkit-box;
+            -webkit-box-pack:center;
+            -webkit-box-align:center;
+
+        }
+
+        .navbar.transparent {
+            border-width: 0px;
+            box-shadow: rgba(0, 0, 0, 0.06) 1px 1px;
+            background-color: rgba(255, 255, 255, 0.92);
+        }
+
     }
-    @media (min-width: 576px) {
-        .projects-section {  height: 165%;  }
-    }
-    @media (min-width: 768px) {
-        .projects-section {  height: 180%;  }
-    }
-    @media (min-width: 992px) {
-        .projects-section {  height: 110%;  }
-    }
-    @media (min-width: 1200px) {
-        .projects-section {  height: 110%;  }
-    }
+
+
 
 }
 
-*/
+
 

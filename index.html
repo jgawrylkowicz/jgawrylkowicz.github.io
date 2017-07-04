@@ -14,6 +14,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-grid.css" rel="stylesheet">
     <link href="css/bootstrap-reboot.css" rel="stylesheet">
+    <link href="css/transparent.css" rel="stylesheet>">
 
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
@@ -43,8 +44,7 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  onresize="resizeSection()" >
 
-
-    <nav class="navbar navbar-toggleable-sm navbar-light fixed-top transparent"  role="navigation">
+    <nav class="navbar navbar-toggleable navbar-light fixed-top transparent"  role="navigation">
 
         <button class="navbar-toggler navbar-toggler-right page-scroll" type="button" data-toggle="collapse" data-target="#collapsingNavbarMd" aria-controls="collapsingNavbarMd" aria-expanded="false" aria-label="Toggle navigation" >
             <span class="navbar-toggler-icon"></span>
@@ -55,9 +55,6 @@
 
             <div class="collapse navbar-collapse" id="collapsingNavbarMd">
                 <ul class="navbar-nav">
-                    <li class="hidden nav-item">
-                        <a class="page-scroll nav-link" href="#page-top"></a>
-                    </li>
                     <li class="nav-item">
                         <a class="page-scroll nav-link" href="#projects">Projects</a>
                     </li>
@@ -67,6 +64,7 @@
                 </ul>
 
             </div>
+
         </div>
     </nav>
 
@@ -81,7 +79,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section" >
+    <section id="projects" class="projects-section"  >
         <div class="container">
             <h1>Personal projects</h1>
             <br>
@@ -192,6 +190,55 @@
     <script>
         AOS.init();
     </script>
+
+   <script>
+
+       $(function () {
+           html2canvas($("body"), {
+               onrendered: function (canvas) {
+                   $(".blurheader").append(canvas);
+                   $("canvas").attr("id", "canvas");
+                   stackBlurCanvasRGB(
+                       'canvas',
+                       0,
+                       0,
+                       $("canvas").width(),
+                       $("canvas").height(),
+                       20);
+               }
+           });
+           vv = setTimeout(function () {
+               $("header").show();
+               clearTimeout(vv);
+           }, 200);
+       });
+
+       $(window).scroll(function () {
+           $("canvas").css(
+               "-webkit-transform",
+               "translatey(-" + $(window).scrollTop() + "px)");
+       });
+
+       window.onresize = function () {
+           $("canvas").width($(window).width());
+       };
+
+       $(document).bind('touchmove', function () {
+           $("canvas").css(
+               "-webkit-transform",
+               "translatey(-" + $(window).scrollTop() + "px)");
+       });
+
+       $(document).bind('touchend', function () {
+           $("canvas").css(
+               "-webkit-transform",
+               "translatey(-" + $(window).scrollTop() + "px)");
+       });
+
+   </script>
+
+
+
 
     <script>
 
