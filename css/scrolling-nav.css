@@ -1,8 +1,10 @@
-/*!
- * Start Bootstrap - Scrolling Nav (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
+
+:root{
+    --theme-color: rgba(0, 113, 255, 0.50);
+    --navbar-color: rgba(255, 255, 255, 0.95);
+    --navbar-border-botom: rgba(0, 0, 0, 0.2);
+}
+
 
 body {
     width: 100%;
@@ -14,79 +16,72 @@ html {
     height: 100%;
 }
 
+@media (min-width: 576px ) {
+    /*TODO better responsive window support*/
 
-
-
-/*MDPI*/
-@media screen and (min-resolution: 1dppx) {
     .navbar {
         height: 80px;
-        padding: 20px 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
     }
+}
 
-    .navbar.transparent {
-        border-width: 0px;
-        box-shadow: rgba(0, 0, 0, 0.06) 1px 1px;
-        background-color: rgba(255, 255, 255, 0.92);
-    }
+.navbar-light .navbar-nav .nav-link{
+    color: var(--theme-color);
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align: center;
+    height: 80px;
+    border-bottom: 3px solid transparent;
+}
 
-    .navbar-light .navbar-nav .nav-link{
-        color: rgba(0, 113, 255, 0.50);
-        display:-webkit-box;
-        -webkit-box-pack:center;
-        -webkit-box-align:center;
-        height: 80px;
-        border-bottom: 3px solid transparent;
-    }
-
-    .navbar.navbar-light {
-        background-color: #FFFFFF;
-    }
-    .navbar-light .navbar-nav > li > a:hover,
-    .navbar-light .navbar-nav > li > a:focus {
-        border-bottom: 3px solid rgba(0, 113, 255, 0.50);
-    }
-
-
-    .navbar-light .navbar-brand{
-        height: 80px;
-        margin-bottom: 8px;
-        display:-webkit-box;
-        -webkit-box-pack:center;
-        -webkit-box-align:center;
-
-    }
-
-    /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
-    The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
-    of those sections to manage the look and feel of the site. */
-
-    .intro-section {
-        height: 100%;
-        padding-top: 120px;
-        text-align: center;
-        background: #fff;
-    }
-
-    .projects-section {
-        height: 100%;
-        padding-top: 120px;
-        text-align: center;
-        background: #eee;
-    }
-
-    .contact-section {
-        height: 100%;
-        padding-top: 120px;
-        text-align: center;
-        background: #fff;
-    }
-
+.navbar.navbar-light {
+    background-color: var(--navbar-color);
+    border-bottom: 1px solid var(--navbar-border-botom);
 
 }
+
+.navbar-light .navbar-nav > li > a:hover,
+.navbar-light .navbar-nav > li > a:focus {
+    border-bottom: 3px solid rgba(0, 113, 255, 0.50);
+}
+
+
+.navbar-light .navbar-brand{
+    height: 80px;
+    margin-bottom: 8px;
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+
+}
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
+of those sections to manage the look and feel of the site. */
+
+.intro-section {
+    height: 100%;
+    padding-top: 100px;
+    text-align: center;
+    background: #fff;
+}
+
+.projects-section {
+    height: 100%;
+    padding-top: 100px;
+    text-align: center;
+    background: #eee;
+}
+
+.contact-section {
+    height: 100%;
+    padding-top: 100px;
+    text-align: center;
+    background: #fff;
+}
+
+
+
+
 
 
 /* xs <576 , s >= 576 , m >= 768 , l >= 992, xl >= 1200 */
@@ -120,25 +115,19 @@ html {
     /*navbar for mobile*/
     @media (max-width: 575px) {
 
-        .navbar {
-            height: 60px;
-            padding: 10px 0;
-            -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-            -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-            transition: background .5s ease-in-out,padding .5s ease-in-out;
-        }
-
         .navbar-light .navbar-nav .nav-link{
-            color: rgba(0, 113, 255, 0.50);
+            color: var(--theme-color);
             display:-webkit-box;
             -webkit-box-pack:center;
-            -webkit-box-align:center;
-            height: 80px;
-            border-bottom: 0px solid transparent;
+            -webkit-box-align: center;
+            height: 50px;
+            border-bottom: none;
         }
 
         .navbar.navbar-light {
-            background-color: #FFFFFF;
+            background-color: var(--navbar-color);
+            border-bottom: 1px solid var(--navbar-border-botom);
+
         }
         .navbar-light .navbar-nav > li > a:hover,
         .navbar-light .navbar-nav > li > a:focus {
@@ -147,18 +136,25 @@ html {
 
         .navbar-light .navbar-brand{
             height: 40px;
-            margin-bottom: 8px;
+            margin: 0px;
             display:-webkit-box;
             -webkit-box-pack:center;
             -webkit-box-align:center;
-
         }
 
-        .navbar.transparent {
-            border-width: 0px;
-            box-shadow: rgba(0, 0, 0, 0.06) 1px 1px;
-            background-color: rgba(255, 255, 255, 0.92);
+        .intro-section {
+            height: 100%;  padding-top: 70px;
         }
+
+        .projects-section {
+            height: 100%;  padding-top: 70px;
+        }
+
+        .contact-section {
+            height: 100%;  padding-top: 70px;
+        }
+
+
 
     }
 
