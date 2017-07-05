@@ -41,7 +41,7 @@
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  onresize="resizeSection()" >
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  onresize="resizeSection()" onscroll="showActiveSection()" >
 
     <nav class="navbar navbar-toggleable navbar-light fixed-top bg-faded"  role="navigation">
 
@@ -53,15 +53,22 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-            <a class="navbar-brand page-scroll" href="#page-top" data-toggle="collapse" data-target=".navbar-collapse.show">Home</a>
+
+
+            <a class="navbar-brand page-scroll" data-toggle="collapse" data-target=".navbar-collapse.show">
+                <div class="active-section"></div>
+            </a>
 
             <div class="collapse navbar-collapse" id="collapsingNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="page-scroll nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"
+                           href="#page-top">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="page-scroll nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"
                            href="#projects">Projects</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="page-scroll nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"
                            href="#contact">Contact</a></li>
@@ -173,9 +180,14 @@
     <script src="js/scrolling-nav.js"></script>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 
+    <script src="js/activeSection.js"></script>
+
     <script>
         AOS.init();
     </script>
+
+
+
 
     <script>
 

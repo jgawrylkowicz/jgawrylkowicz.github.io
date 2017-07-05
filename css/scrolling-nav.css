@@ -5,6 +5,10 @@
     --navbar-border-botom: rgba(0, 0, 0, 0.2);
 }
 
+/*TODO better responsive window support
+    for example iPhone 5
+    for 576 , 575,  574 differences
+*/
 
 body {
     width: 100%;
@@ -17,11 +21,29 @@ html {
 }
 
 @media (min-width: 576px ) {
-    /*TODO better responsive window support*/
+
 
     .navbar {
         height: 80px;
     }
+
+    .navbar-light .navbar-brand{
+        height: 80px;
+        width: 80px;
+        margin-bottom: 8px;
+
+        /*display:-webkit-box;
+        -webkit-box-pack:center;
+        -webkit-box-align:center;
+        */
+    }
+
+    .navbar-light .navbar-nav .nav-link{
+        height: 50px;
+        width: 80px;
+        border-bottom: none;
+    }
+
 }
 
 .navbar-light .navbar-nav .nav-link{
@@ -44,15 +66,13 @@ html {
     border-bottom: 3px solid rgba(0, 113, 255, 0.50);
 }
 
-
 .navbar-light .navbar-brand{
-    height: 80px;
-    margin-bottom: 8px;
     display:-webkit-box;
     -webkit-box-pack:center;
     -webkit-box-align:center;
 
 }
+
 
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
