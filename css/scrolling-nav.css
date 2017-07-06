@@ -80,21 +80,21 @@ of those sections to manage the look and feel of the site. */
 
 .intro-section {
     height: 100%;
-    padding-top: 100px;
+    /*padding-top: 100px; */
     text-align: center;
     background: #fff;
 }
 
 .projects-section {
     height: 100%;
-    padding-top: 100px;
+    /*padding-top: 100px; */
     text-align: center;
     background: #eee;
 }
 
 .contact-section {
     height: 100%;
-    padding-top: 100px;
+    /*padding-top: 100px; */
     text-align: center;
     background: #fff;
 }
@@ -162,20 +162,6 @@ of those sections to manage the look and feel of the site. */
             -webkit-box-align:center;
         }
 
-        .intro-section {
-            height: 100%;  padding-top: 70px;
-        }
-
-        .projects-section {
-            height: 100%;  padding-top: 70px;
-        }
-
-        .contact-section {
-            height: 100%;  padding-top: 70px;
-        }
-
-
-
     }
 
 
@@ -183,69 +169,80 @@ of those sections to manage the look and feel of the site. */
 
 }
 
+/*HXDPI devices with collapsed navbar
+Testing device: OP2 Chrome
+*/
+@media screen and (min-resolution: 2.4dppx){
+
+    /*navbar for mobile*/
+
+
+    .navbar-light .navbar-nav .nav-link{
+        color: var(--theme-color);
+        display:-webkit-box;
+        -webkit-box-pack:center;
+        -webkit-box-align: center;
+        height: 3em;
+        font-size: 2em;
+        border-bottom: none;
+    }
+
+    .navbar.navbar-light {
+            background-color: var(--navbar-color);
+            border-bottom: 1px solid var(--navbar-border-botom);
+
+        }
+    .navbar-light .navbar-nav > li > a:hover,
+    .navbar-light .navbar-nav > li > a:focus {
+            border-bottom: none;
+        }
+
+
+    .navbar-light .navbar-brand{
+        height: 3em;
+        margin: 0px;
+        display:-webkit-box;
+        -webkit-box-pack:center;
+        -webkit-box-align:center;
+        font-size: 2.5em;
+    }
+
+    .navbar-light .navbar-toggler{
+        font-size: 2.5em;
+        margin-top: 20px;
+        /*TODO better vertical alignment*/
+    }
+
+    section{
+        padding-top: 150px;
+        font-size: 1.5em;
+    }
+
+
+    .btn-lg {
+        font-size: 1.75em;
+        padding-right: 2em;
+        padding-left: 2em;
+    }
+
+    .button-wrapper{
+        padding-top: 1em;
+        padding-bottom: 1em;
+        text-align: center;
+    }
+
+}
+
+
+
+
+
+
 /*TODO update media queries the devices, add android
+
+
+  Do not design media queries for specific devices
+
   */
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-    /* Styles */
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen
-and (min-width : 321px) {
-    /* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen
-and (max-width : 320px) {
-    /* Styles */
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px) {
-    /* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
-    /* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-    /* Styles */
-}
-
-/* Desktops and laptops ----------- */
-@media only screen
-and (min-width : 1224px) {
-    /* Styles */
-}
-
-/* Large screens ----------- */
-@media only screen
-and (min-width : 1824px) {
-    /* Styles */
-}
-
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-    /* Styles */
-}
-
 
 
