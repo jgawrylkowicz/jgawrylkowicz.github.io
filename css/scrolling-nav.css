@@ -20,11 +20,11 @@ html {
     height: 100%;
 }
 
-@media (min-width: 576px ) {
+@media screen and (max-resolution: 2dppx) and (min-width: 576px ) {
 
 
     .navbar {
-        height: 80px;
+        height:80px;
     }
 
     .navbar-light .navbar-brand{
@@ -133,7 +133,7 @@ of those sections to manage the look and feel of the site. */
 @media screen and (min-resolution: 2dppx){
 
     /*navbar for mobile*/
-    @media (max-width: 575px) {
+    @media (max-width: 576px) {
 
         .navbar-light .navbar-nav .nav-link{
             color: var(--theme-color);
@@ -180,6 +180,71 @@ of those sections to manage the look and feel of the site. */
 
 
 
+
+}
+
+/*TODO update media queries the devices, add android
+  */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    /* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+    /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+    /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+    /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+    /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+    /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+    /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+    /* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+    /* Styles */
 }
 
 
