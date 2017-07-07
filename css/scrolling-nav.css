@@ -1,9 +1,5 @@
 
 /*
-   TODO better responsive window support
-    for example iPhone 5
-    for 576 , 575,  574 differences
-    xs <576 , s >= 576 , m >= 768 , l >= 992, xl >= 1200
 
    TODO update media queries the devices, add android
     Do not design media queries for specific devices
@@ -63,6 +59,7 @@ section{
     min-height: 100%;
     padding-top: 100px;
     text-align: center;
+    font-size: 1em;
 }
 
 .intro-section {
@@ -84,207 +81,134 @@ section{
     margin: auto;
 }
 
+.navbar.navbar-light {
+    background-color: var(--navbar-color);
+    border-bottom: 1px solid var(--navbar-border-botom);
+}
 
-@media screen and (max-resolution: 2dppx),
-screen and (-webkit-max-device-pixel-ratio: 2){
+.navbar-light .navbar-nav .nav-link{
+    color: var(--theme-color);
+    display: -webkit-box;
+}
 
-    section {
-        font-size: 1em;
+.btn-lg {
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+.button-wrapper {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.phone-background {
+    height: auto; width: auto;
+    max-height: 90%;   max-width: 90%;
+}
+
+@media (min-width: 992px) {
+
+    .navbar{
+        height: 80px;
     }
 
-    .navbar.navbar-light {
-        background-color: var(--navbar-color);
-        border-bottom: 1px solid var(--navbar-border-botom);
+    .navbar-light .navbar-nav .nav-link {
+        height: 80px;
+        width: 100px;
+        font-size: 1.2em;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        border-bottom: 3px solid transparent;
     }
 
-    .navbar-light .navbar-nav .nav-link{
+    .navbar-light .navbar-nav > li > a:hover,
+    .navbar-light .navbar-nav > li > a:focus {
+        border-bottom: 3px solid var(--theme-color);
+    }
+
+}
+
+/*Collapsed navbar for retina displays*/
+@media (max-width: 992px){
+
+    .navbar-light .navbar-nav .nav-link {
+        height: 60px;
+        font-size: 1.25em;
+        -webkit-box-pack: justify;
+        -webkit-box-align: center;
+        border-bottom: none;
+    }
+
+    .navbar-light .navbar-nav > li > a:hover,
+    .navbar-light .navbar-nav > li > a:focus {
+        border-bottom: none;
+    }
+
+    .navbar-light .navbar-brand {
         color: var(--theme-color);
-        display: -webkit-box;
+        font-size: 1.5em;
     }
 
+    .navbar-light .navbar-toggler {
+        font-size: 1.25em;
+    }
 
     .btn-lg {
-        padding-right: 2em;
-        padding-left: 2em;
+        font-size: 1.75em;
     }
 
     .button-wrapper {
-        padding-top: 1em;
-        padding-bottom: 1em;
+        text-align: center;
+
     }
+
+    .navbar-light .container {
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-resolution: 2dppx) and (orientation: portrait),
+screen and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
 
     .phone-background {
-        height: auto; width: auto;
-        max-height: 90%;   max-width: 90%;
+        max-height: 100%; min-width: 100%;
+    }
+    /* Android  */
+    @media (max-width: 992px) {
+        body{
+            font-size: 2em;
+        }
     }
 
-    @media (min-width: 992px) {
-
-        .navbar{
-            height: 80px;
-        }
-
-        .navbar-light .navbar-brand {
-            display: none;
-        }
-
-        .navbar-light .navbar-nav .nav-link {
-            height: 80px;
-            width: 100px;
-            font-size: 1.2em;
-            -webkit-box-pack: center;
-            -webkit-box-align: center;
-            border-bottom: 3px solid transparent;
-        }
-
-        .navbar-light .navbar-nav > li > a:hover,
-        .navbar-light .navbar-nav > li > a:focus {
-            border-bottom: 3px solid var(--theme-color);
-        }
-
-    }
-
-    /*Collapsed navbar for retina displays*/
-    @media (max-width: 992px){
-
-        .navbar-light .navbar-nav .nav-link {
-            height: 60px;
-            font-size: 1.25em;
-            -webkit-box-pack: justify;
-            -webkit-box-align: center;
-            border-bottom: none;
-        }
-
-        .navbar-light .navbar-nav > li > a:hover,
-        .navbar-light .navbar-nav > li > a:focus {
-            border-bottom: none;
-        }
-
-        .navbar-light .navbar-brand {
-            color: var(--theme-color);
+    /*iPad*/
+    @media (max-width: 768px) {
+        body{
             font-size: 1.5em;
         }
+    }
 
-        .navbar-light .navbar-toggler {
-            font-size: 1.25em;
-        }
-
-        .btn-lg {
-            font-size: 1.75em;
-        }
-
-        .button-wrapper {
-            text-align: center;
-
-        }
-
-        .navbar-light .container {
-            position: relative;
-            width: 100%;
+    /*e.g. iPhone 6*/
+    @media (max-width: 375px) {
+        body{
+            font-size: 1em;
         }
     }
 }
 
-/*XDDPI Screens*/
+/*iOS */
+@media screen and (min-resolution: 2.5dppx) and (orientation: portrait),
+screen and (-webkit-min-device-pixel-ratio: 2.5) and (orientation: portrait){
 
-@media screen and (max-resolution: 3dppx),
-screen and (-webkit-max-device-pixel-ratio: 3){
-
-    section {
-        font-size: 2em;
-    }
-
-    .navbar.navbar-light {
-        background-color: var(--navbar-color);
-        border-bottom: 1px solid var(--navbar-border-botom);
-    }
-
-    .navbar-light .navbar-nav .nav-link{
-        color: var(--theme-color);
-        display: -webkit-box;
-    }
-
-
-    .btn-lg {
-        padding-right: 2em;
-        padding-left: 2em;
-    }
-
-    .button-wrapper {
-        padding-top: 1em;
-        padding-bottom: 1em;
-    }
-
-    .phone-background {
-        height: auto; width: auto;
-        max-height: 100%;   max-width: 100%;
-    }
-
-    @media (min-width: 992px) {
-
-        .navbar{
-            height: 80px;
-        }
-
-        .navbar-light .navbar-brand {
-            display: none;
-        }
-
-        .navbar-light .navbar-nav .nav-link {
-            height: 80px;
-            width: 100px;
-            font-size: 1.2em;
-            -webkit-box-pack: center;
-            -webkit-box-align: center;
-            border-bottom: 3px solid transparent;
-        }
-
-        .navbar-light .navbar-nav > li > a:hover,
-        .navbar-light .navbar-nav > li > a:focus {
-            border-bottom: 3px solid var(--theme-color);
-        }
-
-    }
-
-    /*Collapsed navbar for retina displays*/
-    @media (max-width: 992px){
-
-        .navbar-light .navbar-nav .nav-link {
-            height: 100px;
-            font-size: 2.5em;
-            -webkit-box-pack: justify;
-            -webkit-box-align: center;
-            border-bottom: none;
-        }
-
-        .navbar-light .navbar-nav > li > a:hover,
-        .navbar-light .navbar-nav > li > a:focus {
-            border-bottom: none;
-        }
-
-        .navbar-light .navbar-brand {
-            color: var(--theme-color);
-            font-size: 3em;
-        }
-
-        .navbar-light .navbar-toggler {
-            font-size: 2.5em;
-        }
-
-        .btn-lg {
-            font-size: 1.5em;
-        }
-
-        .button-wrapper {
-            text-align: center;
-
-        }
-
-        .navbar-light .container {
-            position: relative;
-            width: 100%;
+    @media (max-width: 992px) {
+        body{
+            font-size: 1em;
         }
     }
 }
+
 
 
