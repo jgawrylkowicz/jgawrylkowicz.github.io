@@ -183,6 +183,11 @@ screen and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
         body{
             font-size: 2em;
         }
+
+        section{
+            padding-top: 130px;
+        }
+
         .navbar-light .navbar-nav .nav-link {
             height: 50%;
         }
