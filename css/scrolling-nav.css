@@ -32,6 +32,10 @@
 
    TODO refractor and import by device for better performance
 
+
+   TODO optimize the css, the code repeats itself too often
+   ideally only the sizes of fonts and elements are mentioned
+
 */
 
 
@@ -187,7 +191,7 @@ screen and (-webkit-max-device-pixel-ratio: 2){
 screen and (-webkit-max-device-pixel-ratio: 3){
 
     section {
-        font-size: 2em;
+        font-size: 3em;
     }
 
     .navbar.navbar-light {
