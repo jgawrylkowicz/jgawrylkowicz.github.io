@@ -28,10 +28,6 @@
 
    TODO refractor and import by device for better performance
 
-
-   TODO optimize the css, the code repeats itself too often
-   ideally only the sizes of fonts and elements are mentioned
-
 */
 
 
@@ -178,6 +174,7 @@ screen and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
     .phone-background {
         max-height: 100%; min-width: 100%;
     }
+
     /* Android  */
     @media (max-width: 992px) {
         body{
@@ -187,7 +184,6 @@ screen and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
         section{
             padding-top: 130px;
         }
-
         .navbar-light .navbar-nav .nav-link {
             height: 50%;
         }
@@ -195,6 +191,9 @@ screen and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
 
     /*iPad*/
     @media (max-width: 768px) {
+        section{
+            padding-top: 100px;
+        }
         body{
             font-size: 1.5em;
         }
@@ -202,6 +201,9 @@ screen and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
 
     /*e.g. iPhone 6*/
     @media (max-width: 375px) {
+        section{
+            padding-top: 100px;
+        }
         body{
             font-size: 1em;
         }
