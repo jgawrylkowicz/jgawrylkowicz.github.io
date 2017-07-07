@@ -103,7 +103,7 @@ section{
 
 .phone-background {
     height: auto; width: auto;
-    max-height: 90%;   max-width: 90%;
+    max-height: 80%;   max-width: 80%;
 }
 
 @media (min-width: 992px) {
@@ -170,6 +170,7 @@ section{
     }
 }
 
+/*Additional media queries for specific devices*/
 
 @media screen and (min-resolution: 2dppx) and (orientation: portrait),
 screen and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
