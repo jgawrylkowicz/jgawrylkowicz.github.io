@@ -3,7 +3,7 @@
  */
 function showActiveSection(){
 
-    var activeSection = null;
+    var activeSection = " ";
     var fadeSpeed = 300;
     var verticalScrollHeight = parseInt( $(window).scrollTop());
 

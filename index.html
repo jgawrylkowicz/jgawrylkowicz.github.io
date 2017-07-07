@@ -12,10 +12,7 @@
 
     <title></title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-grid.css" rel="stylesheet">
-    <link href="css/bootstrap-reboot.css" rel="stylesheet">
-
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
     <link href="css/aos.css" rel="stylesheet">
@@ -28,16 +25,6 @@
         <script src="js/respond.min.js"></script>
     <![endif]-->
 
-    <!--TODO tablet mode + smartphone mode, check for safari compatibility
-     this needs to be done via css
-        https://developer.chrome.com/multidevice/webview/pixelperfect
-
-
-        TODO blur effect for the navbar
-        https://stackoverflow.com/questions/26476774/blurred-effect-under-fixed-bootstrap-navbar
-        http://jsfiddle.net/CSS_Apprentice/WtQjY/415/
-     -->
-
 </head>
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
@@ -47,16 +34,14 @@
     <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-faded"  role="navigation">
 
 
-        <div class="button-table">
-            <div class="button-cell">
-                <button class="navbar-toggler navbar-toggler-right page-scroll" type="button"
-                        data-toggle="collapse" data-target="#collapsingNavbar"
-                        aria-controls="collapsingNavbar" aria-expanded="false"
-                        aria-label="Toggle navigation" >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </div>
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right page-scroll" type="button"
+                data-toggle="collapse" data-target="#collapsingNavbar"
+                aria-controls="collapsingNavbar" aria-expanded="false"
+                aria-label="Toggle navigation" >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
 
         <!--
         TODO add some kind of nav brand for larger devices
@@ -83,7 +68,7 @@
 
             </div>
 
-
+    </div>
 
     </nav>
 

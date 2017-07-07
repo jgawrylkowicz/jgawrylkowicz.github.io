@@ -81,7 +81,6 @@ section{
 }
 
 
-/*@media screen and (max-resolution: 2dppx) and (min-width: 576px ) {*/
 @media screen and (max-resolution: 2dppx),
 screen and (-webkit-max-device-pixel-ratio: 2){
 
@@ -98,6 +97,7 @@ screen and (-webkit-max-device-pixel-ratio: 2){
         color: var(--theme-color);
         display: -webkit-box;
     }
+
 
     .btn-lg {
         padding-right: 2em;
@@ -135,7 +135,7 @@ screen and (-webkit-max-device-pixel-ratio: 2){
 
         .navbar-light .navbar-nav > li > a:hover,
         .navbar-light .navbar-nav > li > a:focus {
-            border-bottom: 3px solid rgba(0, 113, 255, 0.50);
+            border-bottom: 3px solid var(--theme-color);
         }
 
     }
@@ -159,9 +159,6 @@ screen and (-webkit-max-device-pixel-ratio: 2){
         .navbar-light .navbar-brand {
             color: var(--theme-color);
             font-size: 1.5em;
-            /*TODO better vertical alignment*/
-            margin-top: 10px;
-            height: 60px;
         }
 
         .navbar-light .navbar-toggler {
@@ -174,129 +171,116 @@ screen and (-webkit-max-device-pixel-ratio: 2){
 
         .button-wrapper {
             text-align: center;
+
         }
 
-
-
-        /*
-
-        TODO center the toggle button
-
-        .button-table{
-            display: table;
-            background-color: #2aabd2;
+        .navbar-light .container {
+            position: relative;
+            width: 100%;
         }
-
-        .button-cell{
-            display: table-cell;
-            background-color: crimson;
-            vertical-align: middle;
-        }
-        */
-
     }
-
-
 }
 
-/*TODO everything below this needs to be rewritten*/
-
-@media screen and (min-resolution: 2.4dppx){
-
-    /*navbar for mobile*/
-    @media (max-width: 576px) {
-
-        .navbar-light .navbar-nav .nav-link{
-            color: var(--theme-color);
-            display:-webkit-box;
-            -webkit-box-pack:center;
-            -webkit-box-align: center;
-            height: 50px;
-            border-bottom: none;
-        }
-
-        .navbar.navbar-light {
-            background-color: var(--navbar-color);
-            border-bottom: 1px solid var(--navbar-border-botom);
-
-        }
-        .navbar-light .navbar-nav > li > a:hover,
-        .navbar-light .navbar-nav > li > a:focus {
-            border-bottom: none;
-        }
-
-        .navbar-light .navbar-brand{
-            height: 40px;
-            margin: 0px;
-            display:-webkit-box;
-            -webkit-box-pack:center;
-            -webkit-box-align:center;
-        }
-
-    }
 
 
-}
+@media screen and (max-resolution: 3dppx),
+screen and (-webkit-max-device-pixel-ratio: 3){
 
-/*HXDPI devices with collapsed navbar
-Testing device: OP2 Chrome
-*/
-
-@media screen and (min-resolution: 2.4dppx) and (orientation: portrait){
-
-    /*navbar for mobile*/
-
-    section{
-        padding-top: 150px;
-        font-size: 1.5em;
-    }
-
-    .navbar-light .navbar-nav .nav-link{
-        color: var(--theme-color);
-        display:-webkit-box;
-        -webkit-box-pack:center;
-        -webkit-box-align: center;
-        height: 3em;
-        font-size: 2em;
-        border-bottom: none;
+    section {
+        font-size: 1em;
     }
 
     .navbar.navbar-light {
         background-color: var(--navbar-color);
         border-bottom: 1px solid var(--navbar-border-botom);
-
-    }
-    .navbar-light .navbar-nav > li > a:hover,
-    .navbar-light .navbar-nav > li > a:focus {
-        border-bottom: none;
     }
 
-    .navbar-light .navbar-brand{
-        height: 3em;
-        margin: 0px;
-        display:-webkit-box;
-        -webkit-box-pack:center;
-        -webkit-box-align:center;
-        font-size: 2.5em;
+    .navbar-light .navbar-nav .nav-link{
+        color: var(--theme-color);
+        display: -webkit-box;
     }
 
-    .navbar-light .navbar-toggler{
-        font-size: 2.5em;
-        margin-top: 20px;
-        /*TODO better vertical alignment*/
-    }
 
     .btn-lg {
-        font-size: 1.75em;
         padding-right: 2em;
         padding-left: 2em;
     }
 
-    .button-wrapper{
+    .button-wrapper {
         padding-top: 1em;
         padding-bottom: 1em;
-        text-align: center;
     }
 
+    .phone-background {
+        height: auto; width: auto;
+        max-height: 90%;   max-width: 90%;
+    }
+
+    @media (min-width: 992px) {
+
+        .navbar{
+            height: 80px;
+        }
+
+        .navbar-light .navbar-brand {
+            display: none;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            height: 80px;
+            width: 100px;
+            font-size: 1.2em;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+            border-bottom: 3px solid transparent;
+        }
+
+        .navbar-light .navbar-nav > li > a:hover,
+        .navbar-light .navbar-nav > li > a:focus {
+            border-bottom: 3px solid var(--theme-color);
+        }
+
+    }
+
+    /*Collapsed navbar for retina displays*/
+    @media (max-width: 992px){
+
+        .navbar-light .navbar-nav .nav-link {
+            height: 60px;
+            font-size: 1.25em;
+            -webkit-box-pack: justify;
+            -webkit-box-align: center;
+            border-bottom: none;
+        }
+
+        .navbar-light .navbar-nav > li > a:hover,
+        .navbar-light .navbar-nav > li > a:focus {
+            border-bottom: none;
+        }
+
+        .navbar-light .navbar-brand {
+            color: var(--theme-color);
+            font-size: 1.5em;
+        }
+
+        .navbar-light .navbar-toggler {
+            font-size: 1.25em;
+        }
+
+        .btn-lg {
+            font-size: 1.75em;
+        }
+
+        .button-wrapper {
+            text-align: center;
+
+        }
+
+        .navbar-light .container {
+            position: relative;
+            width: 100%;
+        }
+    }
 }
+
 
