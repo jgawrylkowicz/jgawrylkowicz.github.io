@@ -54,6 +54,22 @@ section{
     padding-top: 15%;
 }
 
+h1{
+    font-size: 2.5em;
+}
+
+h2{
+    font-size: 2em;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+p{
+    font-size: 1em;
+}
+
 .intro-section,
 .contact-section{
     background: #fff;
@@ -80,13 +96,13 @@ section{
 }
 
 .navbar-light .navbar-brand{
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-toggler,
 .btn-lg {
-    font-size: 1.25rem;
+    font-size: 1.25em;
 }
 
 .navbar-light .navbar-brand,
@@ -127,7 +143,6 @@ section{
     height: auto; width: auto;
     max-height: 80%;   max-width: 80%;
 }
-
 
 @media screen and (min-width: 992px) {
 
