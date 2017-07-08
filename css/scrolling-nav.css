@@ -141,7 +141,7 @@ p{
     top: 0;  bottom: 0;  left: 0;  right: 0;
     margin: auto;
     height: auto; width: auto;
-    max-height: 80%;   max-width: 80%;
+    max-height: 100%;   max-width: 100%;
 }
 
 @media screen and (min-width: 992px) {
@@ -178,5 +178,9 @@ p{
 
     .button-wrapper {
         text-align: left;
+    }
+
+    .phone-background{
+        max-height: 85%;   max-width: 85%;
     }
 }
