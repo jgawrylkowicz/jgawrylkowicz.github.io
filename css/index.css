@@ -6,16 +6,6 @@
 }
 
 
-.phone-arrows{
-    position: absolute;
-    display: block;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 50%;
-    align-items: center;
-}
-
 
 /*Phone indicators, modified from the bootstrap.js*/
 
