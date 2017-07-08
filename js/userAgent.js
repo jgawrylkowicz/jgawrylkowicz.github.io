@@ -14,6 +14,8 @@ function resizeSection() {
             .removeClass('navbar-toggleable-md')
             .addClass('navbar-toggleable-lg');
 
+        $('#page-top').css('font-size', '2rem');
+
     }
     else if (navigator.userAgent.match(/android/i)){
         userAgent = 'device-android';
