@@ -52,10 +52,6 @@ section{
     text-align: center;
     font-size: 1em;
     padding-top: 15%;
-    /*Mobile scrolling*/
-    overflow-x: hidden;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
 }
 
 h1{
@@ -79,7 +75,7 @@ p{
     background: #fff;
 }
 .navbar{
-    position: fixed;
+    transform: translateZ(0);
 }
 
 .projects-section {
