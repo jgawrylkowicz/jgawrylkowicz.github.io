@@ -8,7 +8,7 @@ function resizeSection() {
 
     var userAgent = null;
 
-    if (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)) {
+    if (navigator.userAgent.match(/(iPhone|iPod)/i)) {
         userAgent = 'device-ios';
         $('#navbar')
             .removeClass('navbar-toggleable-md')
