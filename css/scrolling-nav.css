@@ -1,11 +1,5 @@
 
 /*
-
-   TODO update media queries the devices, add android
-    Do not design media queries for specific devices
-
-
-
     Desktops:
      * Standard DPI devices
      * HDPI devices
@@ -27,12 +21,17 @@
     Opera???
 
    TODO refractor and import by device for better performance
+    Probably not needed, but still
+
+   TODO OP2 and iPad Mini test
+   TODO DPI 1 test
 
 */
 
 
 :root{
     --theme-color: rgba(0, 113, 255, 0.50);
+    --theme-color-hover: rgba(0, 113, 255, 1);
     --navbar-color: rgba(255, 255, 255, 0.95);
     --navbar-border-botom: rgba(0, 0, 0, 0.2);
 }
@@ -53,7 +52,6 @@ section{
     and also extends the section if the content requires it. */
     height: auto;
     min-height: 100%;
-    padding-top: 100px;
     text-align: center;
     font-size: 1em;
 }
@@ -85,6 +83,7 @@ section{
 .navbar-light .navbar-nav .nav-link{
     color: var(--theme-color);
     display: -webkit-box;
+    outline:none;
 }
 
 .btn-lg {
@@ -102,16 +101,30 @@ section{
     max-height: 80%;   max-width: 80%;
 }
 
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-toggler,
+.btn-lg {
+    font-size: 1.25rem;
+}
+.navbar-light .navbar-brand{
+    font-size: 1.5rem;
+}
+
+
+
 @media (min-width: 992px) {
 
-    .navbar{
-        height: 80px;
+    section{
+        padding-top: 7.5%;
+    }
+
+    .navbar,
+    .navbar-light .navbar-nav .nav-link {
+        height: 70px;
     }
 
     .navbar-light .navbar-nav .nav-link {
-        height: 80px;
         width: 100px;
-        font-size: 1.2em;
         -webkit-box-pack: center;
         -webkit-box-align: center;
         border-bottom: 3px solid transparent;
@@ -119,107 +132,63 @@ section{
 
     .navbar-light .navbar-nav > li > a:hover,
     .navbar-light .navbar-nav > li > a:focus {
+        color: var(--theme-color-hover) !important;
         border-bottom: 3px solid var(--theme-color);
     }
 
+    /*TODO a:focus not working in safari and chrome, but in opera*/
 }
 
 /*Collapsed navbar for retina displays*/
 @media (max-width: 992px){
 
-    .navbar-light .navbar-nav .nav-link {
-        height: 60px;
-        font-size: 1.25em;
-        -webkit-box-pack: justify;
-        -webkit-box-align: center;
-        border-bottom: none;
+    section{
+        padding-top: 15%;
     }
 
+    /**iPad fix? **************************/
+    body {
+        margin: 0;
+    }
+
+    .navbar-fixed-top {
+        position: relative;
+        top: auto;
+    }
+    .navbar-collapse {
+        max-height: none;
+    }
+    /**************************************/
+    .navbar-light .navbar-brand,
+    .navbar-light .navbar-nav .nav-link {
+        margin-left: 5%;
+    }
+
+    .navbar-light .container {
+        position: relative;
+        width: 100%;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        -webkit-box-pack: justify;
+        -webkit-box-align: center;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
     .navbar-light .navbar-nav > li > a:hover,
     .navbar-light .navbar-nav > li > a:focus {
         border-bottom: none;
     }
 
-    .navbar-light .navbar-brand {
-        color: var(--theme-color);
-        font-size: 1.5em;
-    }
-
-    .navbar-light .navbar-toggler {
-        font-size: 1.25em;
-    }
-
-    .btn-lg {
-        font-size: 1.75em;
+    .navbar-light .navbar-brand,
+    .navbar-light .navbar-nav > li > a:hover,
+    .navbar-light .navbar-nav > li > a:focus {
+        color: var(--theme-color-hover) !important;
     }
 
     .button-wrapper {
         text-align: center;
-
     }
 
-    .navbar-light .container {
-        position: relative;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        width: 100%;
-    }
+
 }
-
-/*Additional media queries for specific devices*/
-
-@media screen and (min-resolution: 2dppx) and (orientation: portrait),
-screen and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
-
-    .phone-background {
-        max-height: 100%; min-width: 100%;
-    }
-
-    /* Android  */
-    @media (max-width: 992px) {
-        body{
-            font-size: 2em;
-        }
-
-        section{
-            padding-top: 130px;
-        }
-        .navbar-light .navbar-nav .nav-link {
-            height: 50%;
-        }
-    }
-
-    /*iPad*/
-    @media (max-width: 768px) {
-        section{
-            padding-top: 100px;
-        }
-        body{
-            font-size: 1.5em;
-        }
-    }
-
-    /*e.g. iPhone 6*/
-    @media (max-width: 375px) {
-        section{
-            padding-top: 100px;
-        }
-        body{
-            font-size: 1em;
-        }
-    }
-}
-
-/*iOS */
-@media screen and (min-resolution: 2.5dppx) and (orientation: portrait),
-screen and (-webkit-min-device-pixel-ratio: 2.5) and (orientation: portrait){
-
-    @media (max-width: 992px) {
-        body{
-            font-size: 1em;
-        }
-    }
-}
-
-
-
