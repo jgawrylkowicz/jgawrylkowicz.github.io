@@ -3,8 +3,9 @@
  */
 function showActiveSection(){
 
+    //focus is for desktop sites and the html insert for mobile
+
     var activeSection = " ";
-    var fadeSpeed = 300;
     var verticalScrollHeight = parseInt( $(window).scrollTop());
 
     var introSectionHeight = $('#intro').height();
@@ -12,35 +13,25 @@ function showActiveSection(){
     var contactSectionHeight = $('#contact').height() + projectsSectionHeight;
 
     if (verticalScrollHeight <= introSectionHeight) {
+
         activeSection = 'Home';
+        $('#home-link').focus();
         $('.active-section').html(activeSection);
     }
     else if (verticalScrollHeight > introSectionHeight
         && verticalScrollHeight <= projectsSectionHeight) {
+
+        $('#projects-link').focus();
         activeSection = 'Projects';
         $('.active-section').html(activeSection);
     }
     else if (verticalScrollHeight > projectsSectionHeight
         && verticalScrollHeight <= contactSectionHeight) {
+
+        $('#contact-link').focus();
         activeSection = 'Contact';
         $('.active-section').html(activeSection);
     }
-
-
-    //TODO fade in and fade out
-
-    /*function changeTo(value) {
-
-     if (value === activeSection || activeSection === null) {
-
-     $('.active-section').fadeOut(fadeSpeed, function () {
-     $('.active-section').html(value);
-     $('.active-section').fadeIn(fadeSpeed);
-     });
-     }
-     }
-
-     */
 
 }
 

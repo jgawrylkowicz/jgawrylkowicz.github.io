@@ -23,9 +23,6 @@
    TODO refractor and import by device for better performance
     Probably not needed, but still
 
-   TODO OP2 and iPad Mini test
-   TODO DPI 1 test
-
 */
 
 
@@ -54,9 +51,11 @@ section{
     min-height: 100%;
     text-align: center;
     font-size: 1em;
+    padding-top: 15%;
 }
 
-.intro-section {
+.intro-section,
+.contact-section{
     background: #fff;
 }
 
@@ -64,15 +63,9 @@ section{
     background: #eee;
 }
 
-.contact-section {
-    background: #fff;
-}
-
-.phone-background{
+.navbar-light .container {
     position: relative;
-    display: block;
-    top: 0;  bottom: 0;  left: 0;  right: 0;
-    margin: auto;
+    width: 100%;
 }
 
 .navbar.navbar-light {
@@ -83,7 +76,36 @@ section{
 .navbar-light .navbar-nav .nav-link{
     color: var(--theme-color);
     display: -webkit-box;
-    outline:none;
+    outline: none;
+}
+
+.navbar-light .navbar-brand{
+    font-size: 1.5rem;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-toggler,
+.btn-lg {
+    font-size: 1.25rem;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    margin-left: 5%;
+    -webkit-box-pack: justify;
+    -webkit-box-align: center;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav > li > a:hover,
+.navbar-light .navbar-nav > li > a:focus {
+    border-bottom: none;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav > li > a:hover,
+.navbar-light .navbar-nav > li > a:focus {
+    color: var(--theme-color-hover) !important;
 }
 
 .btn-lg {
@@ -94,22 +116,17 @@ section{
 .button-wrapper {
     padding-top: 1em;
     padding-bottom: 1em;
+    text-align: center;
 }
 
-.phone-background {
+.phone-background{
+    position: relative;
+    display: block;
+    top: 0;  bottom: 0;  left: 0;  right: 0;
+    margin: auto;
     height: auto; width: auto;
     max-height: 80%;   max-width: 80%;
 }
-
-.navbar-light .navbar-nav .nav-link,
-.navbar-light .navbar-toggler,
-.btn-lg {
-    font-size: 1.25rem;
-}
-.navbar-light .navbar-brand{
-    font-size: 1.5rem;
-}
-
 
 
 @media screen and (min-width: 992px) {
@@ -118,11 +135,19 @@ section{
         padding-top: 7.5%;
     }
 
+    /*
     .navbar,
     .navbar-light .navbar-nav .nav-link {
         height: 70px;
     }
 
+    */
+    .navbar-light .navbar-brand,
+    .navbar-light .navbar-nav .nav-link {
+        margin-left: 0;
+    }
+
+    /*
     .navbar-light .navbar-nav .nav-link {
         width: 100px;
         -webkit-box-pack: center;
@@ -132,82 +157,11 @@ section{
 
     .navbar-light .navbar-nav > li > a:hover,
     .navbar-light .navbar-nav > li > a:focus {
-        color: var(--theme-color-hover) !important;
         border-bottom: 3px solid var(--theme-color);
     }
-
-    /*TODO a:focus not working in safari and chrome, but in opera*/
-}
-
-/*Collapsed navbar for retina displays*/
-@media screen and (max-width: 992px){
-
-    section{
-        padding-top: 15%;
-    }
-
-    /**iPad fix? **************************/
-    body {
-        margin: 0;
-    }
-
-    .navbar-fixed-top {
-        position: relative;
-        top: auto;
-    }
-    .navbar-collapse {
-        max-height: none;
-    }
-    /**************************************/
-
-    .navbar-light .navbar-brand,
-    .navbar-light .navbar-nav .nav-link {
-        margin-left: 5%;
-    }
-
-    .navbar-light .container {
-        position: relative;
-        width: 100%;
-    }
-
-    .navbar-light .navbar-nav .nav-link {
-        -webkit-box-pack: justify;
-        -webkit-box-align: center;
-    }
-
-    .navbar-light .navbar-nav .nav-link,
-    .navbar-light .navbar-nav > li > a:hover,
-    .navbar-light .navbar-nav > li > a:focus {
-        border-bottom: none;
-    }
-
-    .navbar-light .navbar-brand,
-    .navbar-light .navbar-nav > li > a:hover,
-    .navbar-light .navbar-nav > li > a:focus {
-        color: var(--theme-color-hover) !important;
-    }
+    */
 
     .button-wrapper {
-        text-align: center;
+        text-align: left;
     }
-
-    @media (min-resolution: 3dppx) and (orientation: portrait),
-    (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
-
-        body{
-            font-size: 2rem;
-        }
-
-        .navbar-light .navbar-nav .nav-link,
-        .navbar-light .navbar-toggler,
-        .btn-lg {
-            font-size: 2rem;
-        }
-        .navbar-light .navbar-brand{
-            font-size: 2.5rem;
-        }
-
-    }
-
-
 }
