@@ -4,7 +4,7 @@
 
 
 function resizeSection() {
-    var dpi = window.devicePixelRatio;
+   // var dpi = window.devicePixelRatio;
 
     var userAgent = null;
 
@@ -17,7 +17,6 @@ function resizeSection() {
     }
     else if (navigator.userAgent.match(/android/i)){
         userAgent = 'device-android';
-
         //chrome
         $('#navbar')
             .removeClass('navbar-toggleable-md')
@@ -27,17 +26,14 @@ function resizeSection() {
 
     }
     else{
-
         userAgent = 'desktop';
         $('#navbar')
             .removeClass('navbar-toggleable-md')
             .addClass('navbar-toggleable');
         $('#navbar-brand').addClass('hidden-sm-up');
-
-
     }
 
-    $('.results').html('dpi: ' + dpi + ' window:' + $(window).width() + 'uA: ' +userAgent);
+    //$('.results').html('dpi: ' + dpi + ' window:' + $(window).width() + 'uA: ' +userAgent);
 }
 
 window.onload = resizeSection();
