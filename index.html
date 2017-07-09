@@ -23,7 +23,7 @@
 
 </head>
 
-<body data-spy="scroll" data-target="#navbar" onscroll="showActiveSection()" >
+<div data-spy="scroll" data-target="#navbar" onscroll="showActiveSection()" >
 
 <div class="loader"></div>
 
@@ -60,14 +60,11 @@
     </div>
 
 </nav>
-
-<!--TODO add inner container for desktop-->
-
-    <div class="container-fluid section intro-section" id="intro" style="display: none">
+<div class="container-fluid">
+    <div class="section intro-section" id="intro" style="display: none">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="row justify-content-around">
-
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div style="text-align: justify;">
                             <div class="jumbotron">
@@ -116,7 +113,7 @@
         </div>
     </div>
 
-    <div class="container-fluid section projects-section" id="projects" style="display: none">
+    <div class="section projects-section" id="projects" style="display: none">
         <h2>Personal projects</h2>
         <br>
         <div class="row">
@@ -166,7 +163,7 @@
         </div>
     </div>
 
-    <div class="container-fluid section contact-section" id="contact" style="display: none">
+    <div class="section contact-section" id="contact" style="display: none">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="row">
@@ -215,7 +212,7 @@
             </div>
         </div>
     </div>
-
+</div>
 
 <script src="js/jquery-3.2.1.js"></script>
 <script type="text/javascript">
