@@ -1,76 +1,209 @@
 
+/*
+    Desktops:
+     * Standard DPI devices
+     * HDPI devices
+
+    Laptops:
+     * Standard DPI devices
+     * HDPI devices
+
+    Mobile:
+     * HDPI devices
+     * Landscape and portrait orientation
+
+    Safari:
+    Media queries for Safari:
+     * screen and (-webkit-min-device-pixel-ratio: 2)
+
+    Firefox???
+
+    Opera???
+
+   TODO refractor and import by device for better performance
+    Probably not needed, but still
+
+*/
+
+
+:root{
+    --theme-color: rgba(0, 113, 255, 0.50);
+    --theme-color-hover: rgba(0, 113, 255, 1);
+    --navbar-color: rgba(255, 255, 255, 0.95);
+    --navbar-border-botom: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    /*Very important. It keeps the section at minimum
+    height of 100% - meaning the height of the screen
+    and also extends the section if the content requires it. */
+    height: auto;
+    min-height: 100%;
+    max-height: 170%;
+    text-align: center;
+    font-size: 1em;
+    padding-top: 15%;
+    overflow-y: scroll;
+}
+
+h1{
+    font-size: 2.5em;
+}
+
+h2{
+    font-size: 2em;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+p{
+    font-size: 1em;
+}
+
+.intro-section,
+.contact-section{
+    background: #fff;
+}
+
+.projects-section {
+    background: #eee;
+}
+
+.navbar-light .container {
+    width: 100%;
+}
+
+.navbar.navbar-light {
+    background-color: var(--navbar-color);
+    border-bottom: 1px solid var(--navbar-border-botom);
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: var(--theme-color);
+    display: -webkit-box;
+    outline: none;
+}
+
+.navbar-light .navbar-brand{
+    font-size: 1.5em;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-toggler,
+.btn-lg {
+    font-size: 1.25em;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    margin-left: 5%;
+    -webkit-box-pack: justify;
+    -webkit-box-align: center;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav > li > a:hover,
+.navbar-light .navbar-nav > li > a:focus {
+    border-bottom: none;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav > li > a:hover,
+.navbar-light .navbar-nav > li > a:focus {
+    color: var(--theme-color-hover) !important;
+}
+
+.btn-lg {
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+.button-wrapper {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.phone-background{
+    position: relative;
+    display: block;
+    top: 0;  bottom: 0;  left: 0;  right: 0;
+    margin: auto;
+    height: auto; width: auto;
+    max-height: 80vh;   max-width: 80vh;
+}
 
 .phone-display{
     /*used for the screenshots later*/
     z-index: 2;
 }
 
-
-
-/*Phone indicators, modified from the bootstrap.js*/
-
-.phone-indicators {
-    position: absolute;
-    top: 10px;
+.loader {
+    position: fixed;
     left: 50%;
-    z-index: 15;
-    width: 60%;
-    padding-left: 0;
-    margin-left: -30%;
-    text-align: center;
-    list-style: none;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid var(--theme-color);
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
 }
-.phone-indicators li {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 1px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color: #000 \9;
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid #0070ff;
-    border-radius: 10px;
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
 }
-.phone-indicators .active {
-    width: 12px;
-    height: 12px;
-    margin: 0;
-    background-color: #0070ff;
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 
-/*phone-control = carousel-control
-for better control
+@media screen and (min-width: 992px) {
 
-*/
+    section{
+        padding-top: 7.5%;
+    }
 
-.phone-control {
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    width: 15%;
-    font-size: 30px;
-    color: rgba(2, 2, 2, 0.25);
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0);
-    vertical-align: middle;
-}
-.phone-control.left {
-    left: 30%;
-}
-.phone-control.right {
-    right: 30%;
-}
-.phone-control:hover{
-    color: #020202;
-    text-decoration: none;
-    filter: alpha(opacity=90);
-    outline: 0;
-    opacity: .9;
-}
+    /*
+    Underline hover and underline focus for desktop
+
+    .navbar,
+    .navbar-light .navbar-nav .nav-link {
+        height: 70px;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        width: 100px;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        border-bottom: 3px solid transparent;
+    }
+
+    .navbar-light .navbar-nav > li > a:hover,
+    .navbar-light .navbar-nav > li > a:focus {
+        border-bottom: 3px solid var(--theme-color);
+    }
+    */
 
 
+}
 
 
 
