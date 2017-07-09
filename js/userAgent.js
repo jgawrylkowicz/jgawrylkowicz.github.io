@@ -1,43 +1,29 @@
 /**
- * Created by jakub on 08/07/2017.
+ * Created by Jakub Gawrylkowicz on 08/07/2017.
+
+ * Specifies different behavior for different clients. Even with resposive design some small changes need to be made
+ * in order to have the equal browsing experinece across all platforms.
+ *
+ * For mobile devices the fontsize needs to be dependent on the width of the client.
+ *
+ * For desktop devices (and also tablets and laptops) some classes responisible for breakepoints or view width need
+ * to be adressed.
  */
-
-
 function resizeSection() {
-   // var dpi = window.devicePixelRatio;
-
-    var userAgent = null;
-
 
     if (navigator.userAgent.match(/(iPhone|iPod)/i)) {
-        userAgent = 'device-ios';
-        $('#navbar')
-            .removeClass('navbar-toggleable-md')
-            .addClass('navbar-toggleable-lg');
-
        document.body.style.fontSize = '4vw';
-
-
     }
     else if (navigator.userAgent.match(/android/i)){
-        userAgent = 'device-android';
-        //chrome
-        $('#navbar')
-            .removeClass('navbar-toggleable-md')
-            .addClass('navbar-toggleable-lg');
-
         document.body.style.fontSize = '4vw';
-
     }
     else{
-        userAgent = 'desktop';
-        $('#navbar')
-            .removeClass('navbar-toggleable-md')
-            .addClass('navbar-toggleable');
+        $('#navbar').removeClass('navbar-toggleable-lg').addClass('navbar-toggleable');
         $('#navbar-brand').addClass('hidden-sm-up');
+        $('#intro-content').removeClass('container-fluid').addClass('container');
+        $('#projects-content').removeClass('container-fluid').addClass('container');
+        $('#contact-content').removeClass('container-fluid').addClass('container');
     }
-
-    //$('.results').html('dpi: ' + dpi + ' window:' + $(window).width() + 'uA: ' +userAgent);
 }
 
 window.onload = resizeSection();

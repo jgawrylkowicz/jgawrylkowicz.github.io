@@ -74,9 +74,6 @@ p{
 .contact-section{
     background: #fff;
 }
-.navbar{
-    transform: translateZ(0);
-}
 
 .projects-section {
     background: #eee;
@@ -144,8 +141,9 @@ p{
     top: 0;  bottom: 0;  left: 0;  right: 0;
     margin: auto;
     height: auto; width: auto;
-    max-height: 100%;   max-width: 100%;
+    max-height: 80vh;   max-width: 80vh;
 }
+
 
 
 .loader {
@@ -185,12 +183,8 @@ p{
         margin-left: 0;
     }
 
-    .button-wrapper {
-        text-align: left;
-    }
-
     .phone-background{
-        max-height: 85%;   max-width: 85%;
+        max-height: 80vh;   max-width: 80vh;
     }
 
     /*
