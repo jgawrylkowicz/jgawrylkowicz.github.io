@@ -1,31 +1,3 @@
-
-/*
-    Desktops:
-     * Standard DPI devices
-     * HDPI devices
-
-    Laptops:
-     * Standard DPI devices
-     * HDPI devices
-
-    Mobile:
-     * HDPI devices
-     * Landscape and portrait orientation
-
-    Safari:
-    Media queries for Safari:
-     * screen and (-webkit-min-device-pixel-ratio: 2)
-
-    Firefox???
-
-    Opera???
-
-   TODO refractor and import by device for better performance
-    Probably not needed, but still
-
-*/
-
-
 :root{
     --theme-color: rgba(0, 113, 255, 0.50);
     --theme-color-hover: rgba(0, 113, 255, 1);
@@ -47,13 +19,14 @@ section{
     /*Very important. It keeps the section at minimum
     height of 100% - meaning the height of the screen
     and also extends the section if the content requires it. */
+    /*
     height: auto;
     min-height: 100%;
     max-height: 170%;
+    */
     text-align: center;
     font-size: 1em;
     padding-top: 15%;
-    overflow-y: scroll;
 }
 
 h1{
