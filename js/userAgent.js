@@ -20,9 +20,11 @@ function resizeSection() {
     else{
         $('#navbar').removeClass('navbar-toggleable-lg').addClass('navbar-toggleable');
         $('#navbar-brand').addClass('hidden-sm-up');
-        $('#intro-content').removeClass('container-fluid').addClass('container');
-        $('#projects-content').removeClass('container-fluid').addClass('container');
-        $('#contact-content').removeClass('container-fluid').addClass('container');
+        /*
+        $('#intro').removeClass('container-fluid').addClass('container');
+        $('#projects').removeClass('container-fluid').addClass('container');
+        $('#contact').removeClass('container-fluid').addClass('container');
+        */
     }
 }
 
