@@ -32,7 +32,6 @@ function showActiveSection(){
         activeSection = 'Contact';
         $('.active-section').html(activeSection);
     }
-
 }
 
 window.onload = showActiveSection();
