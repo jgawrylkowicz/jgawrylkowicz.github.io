@@ -8,13 +8,15 @@ function resizeSection() {
 
     var userAgent = null;
 
+
     if (navigator.userAgent.match(/(iPhone|iPod)/i)) {
         userAgent = 'device-ios';
         $('#navbar')
             .removeClass('navbar-toggleable-md')
             .addClass('navbar-toggleable-lg');
 
-       // $('#page-top').css('font-size', '2rem');
+       document.body.style.fontSize = '4vw';
+
 
     }
     else if (navigator.userAgent.match(/android/i)){
@@ -24,7 +26,7 @@ function resizeSection() {
             .removeClass('navbar-toggleable-md')
             .addClass('navbar-toggleable-lg');
 
-        $('#page-top').css('font-size', '2rem');
+        document.body.style.fontSize = '4vw';
 
     }
     else{
