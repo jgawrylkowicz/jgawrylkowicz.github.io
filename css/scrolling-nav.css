@@ -80,7 +80,6 @@ p{
 }
 
 .navbar-light .container {
-    position: relative;
     width: 100%;
 }
 
@@ -145,7 +144,6 @@ p{
 }
 
 
-
 .loader {
     position: fixed;
     left: 50%;
@@ -178,17 +176,7 @@ p{
         padding-top: 7.5%;
     }
 
-    .navbar-light .navbar-brand,
-    .navbar-light .navbar-nav .nav-link {
-        margin-left: 0;
-    }
-
-    .phone-background{
-        max-height: 80vh;   max-width: 80vh;
-    }
-
     /*
-
     Underline hover and underline focus for desktop
 
     .navbar,
