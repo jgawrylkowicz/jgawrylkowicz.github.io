@@ -1,11 +1,42 @@
 /**
- * Created by jakub on 05.07.17.
+ * Jakub Gawrylkowicz 09/07/17
  */
+
+//TODO could use some rewriting
+
+$("#projects-link").on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $("#projects").offset().top
+    }, 300);
+});
+
+$("#contact-link").on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $("#contact").offset().top
+    }, 300);
+});
+
+$("#intro-link").on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $("#intro").offset().top
+    }, 300);
+});
+
+function init(){
+    $('.loader').fadeOut(500, function () {
+        showActiveSection();
+        resizeSection();
+        $('.section').fadeTo(250, 1);
+    });
+}
+
+
 function showActiveSection(){
 
-    //focus is for desktop sites and the html insert for mobile
-
-    var activeSection = " ";
+    var activeSection;
     var verticalScrollHeight = parseInt( $(window).scrollTop());
 
     var introSectionHeight = $('#intro').height();
@@ -32,6 +63,9 @@ function showActiveSection(){
         activeSection = 'Contact';
         $('.active-section').html(activeSection);
     }
+
 }
 
+
+window.onload = init();
 window.onload = showActiveSection();

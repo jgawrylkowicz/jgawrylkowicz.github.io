@@ -11,7 +11,7 @@
  */
 function resizeSection() {
 
-    if (navigator.userAgent.match(/(iPhone|iPod)/i)) {
+    if (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)) {
        document.body.style.fontSize = '4vw';
     }
     else if (navigator.userAgent.match(/android/i)){
@@ -20,11 +20,8 @@ function resizeSection() {
     else{
         $('#navbar').removeClass('navbar-toggleable-lg').addClass('navbar-toggleable');
         $('#navbar-brand').addClass('hidden-sm-up');
-        /*
-        $('#intro').removeClass('container-fluid').addClass('container');
-        $('#projects').removeClass('container-fluid').addClass('container');
-        $('#contact').removeClass('container-fluid').addClass('container');
-        */
+        $('.section').css('padding-top', '7.5%');
+
     }
 }
 
