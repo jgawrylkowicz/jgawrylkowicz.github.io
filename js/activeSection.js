@@ -43,13 +43,8 @@ function showActiveSection(){
     var projectsSectionHeight = $('#projects').height() + introSectionHeight;
     var contactSectionHeight = $('#contact').height() + projectsSectionHeight;
 
-    if (verticalScrollHeight <= introSectionHeight) {
 
-        activeSection = 'Home';
-        $('#home-link').focus();
-        $('.active-section').html(activeSection);
-    }
-    else if (verticalScrollHeight > introSectionHeight
+    if (verticalScrollHeight > introSectionHeight
         && verticalScrollHeight <= projectsSectionHeight) {
 
         $('#projects-link').focus();
@@ -61,6 +56,11 @@ function showActiveSection(){
 
         $('#contact-link').focus();
         activeSection = 'Contact';
+        $('.active-section').html(activeSection);
+    }
+    else{
+        activeSection = 'Home';
+        $('#intro-link').focus();
         $('.active-section').html(activeSection);
     }
 
