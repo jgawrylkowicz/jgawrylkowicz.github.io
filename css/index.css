@@ -26,9 +26,9 @@ html {
     and also extends the section if the content requires it. */
     height: auto;
     min-height: 100vh;
-    text-align: center;
     font-size: 1em;
     padding-top: 15vh !important;
+    text-align: justify;
 }
 
 h1{

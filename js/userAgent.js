@@ -11,11 +11,11 @@
  */
 function resizeSection() {
 
-    if (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)) {
+    if (navigator.userAgent.match(/(android|iPhone|iPod)/i)) {
        document.body.style.fontSize = '4vw';
     }
-    else if (navigator.userAgent.match(/android/i)){
-        document.body.style.fontSize = '4vw';
+    else if (navigator.userAgent.match(/iPad/i)){
+        document.body.style.fontSize = '2vw';
     }
 
 }
