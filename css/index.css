@@ -16,6 +16,12 @@ html {
     height: 100%;
 }
 
+
+.navbar-light .container > button {
+    border: none !important;
+}
+
+
 .container-fluid{
     padding-left: 5%;
     padding-right: 5%;
@@ -64,7 +70,6 @@ p{
 .navbar-light .container {
     width: 100%;
 }
-
 
 .navbar.navbar-light {
     background-color: var(--navbar-color);
