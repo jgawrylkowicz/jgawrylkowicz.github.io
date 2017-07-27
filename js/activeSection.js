@@ -69,3 +69,4 @@ function showActiveSection(){
 
 window.onload = init();
 window.onload = showActiveSection();
+

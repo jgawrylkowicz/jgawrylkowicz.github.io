@@ -24,16 +24,16 @@ html {
     /*Very important. It keeps the section at minimum
     height of 100% - meaning the height of the screen
     and also extends the section if the content requires it. */
-    display: none;
     height: auto;
     min-height: 100vh;
     text-align: center;
     font-size: 1em;
-    padding-top: 15%;
+    padding-top: 15vh !important;
 }
 
 h1{
     font-size: 2.5em;
+    font-weight: 300;
 }
 
 h2{
@@ -64,9 +64,11 @@ p{
     width: 100%;
 }
 
+
 .navbar.navbar-light {
     background-color: var(--navbar-color);
     border-bottom: 1px solid var(--navbar-border-botom);
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-light .navbar-nav .nav-link{
@@ -75,12 +77,15 @@ p{
     outline: none;
 }
 
-.navbar-light .navbar-brand{
+#navbar-brand{
     font-size: 1.5em;
+    color: rgba(0,0,0,0.20) !important;
 }
+
 
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-toggler,
+#navbar-brand-spy,
 .btn-lg {
     font-size: 1.25em;
 }
@@ -128,69 +133,3 @@ p{
     /*used for the screenshots later*/
     z-index: 2;
 }
-
-.loader {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    z-index: 1;
-    width: 150px;
-    height: 150px;
-    margin: -75px 0 0 -75px;
-    border: 4px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 4px solid var(--theme-color);
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/*Underline hover and underline focus for desktop*/
-/*
-@media screen and (min-width: 992px) {
-
-
-
-    .navbar,
-    .navbar-light .navbar-nav .nav-link {
-        height: 70px;
-    }
-    .navbar-light .navbar-nav .nav-link {
-        width: 100px;
-        height: 100%;
-        -webkit-box-pack: center;
-        -webkit-box-align: center;
-        border-bottom: 3px solid transparent;
-    }
-
-    .navbar-light .navbar-nav > li > a:hover,
-    .navbar-light .navbar-nav > li > a:focus {
-        border-bottom: 3px solid var(--theme-color);
-    }
-
-
-
-}
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
