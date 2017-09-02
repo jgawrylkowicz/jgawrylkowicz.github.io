@@ -1,141 +1,174 @@
-:root{
-    --theme-color: rgba(0, 113, 255, 0.50);
-    --theme-color-hover: rgba(0, 113, 255, 1);
-    --navbar-color: rgba(255, 255, 255, 0.95);
-    --navbar-border-botom: rgba(0, 0, 0, 0.2);
+:root {
+  --theme-color: rgba(0, 113, 255, 0.50);
+  --theme-color-hover: rgba(0, 113, 255, 1);
+  --navbar-color: rgba(20,20,20, 0.9);
+  --navbar-border-botom: rgba(0, 0, 0, 1);
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    font-size: 1em !important;
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  font-size: 1em !important;
+  background-image: url("../img/intro-background.png");
+  line-height: 1.6;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  background-size: cover;
 }
-
 html {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+}
+h1 {
+  font-size: 2.5em;
+  font-weight: 500 !important;
+  padding-bottom: 50px;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.5em;
+}
+p {
+  font-size: 1em;
 }
 
 
-.navbar-light .container > button {
-    border: none !important;
+
+.content {
+  position: relative !important;
 }
-
-
-.container-fluid{
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.section{
-    /*Very important. It keeps the section at minimum
+.section {
+  /*Very important. It keeps the section at minimum
     height of 100% - meaning the height of the screen
     and also extends the section if the content requires it. */
-    height: auto;
-    min-height: 100vh;
-    font-size: 1em;
-    padding-top: 15vh !important;
-    text-align: justify;
-}
+  height: auto;
+  min-height: 100vh;
+  width: 60%;
+  min-width: 768px;
+  max-width: 1024px;
+  font-size: 1em;
+  text-align: justify;
 
-h1{
-    font-size: 2.5em;
-    font-weight: 300;
-}
+  padding-left: 0;
+  padding-right: 0;
+  box-shadow: 0px 32px 32px 0px rgba(0, 0, 0, 0.3);
 
-h2{
-    font-size: 2em;
 }
-
-h3{
-    font-size: 1.5em;
+.intro-section {
+  margin-top: 15vh;
 }
-
-p{
-    font-size: 1em;
-}
-.content{
-    position: relative !important;
-}
-
-.intro-section,
 .contact-section{
-    background: #fff;
+  margin-bottom: 20vh;
+}
+.intro-section, .contact-section{
+  background-color: #eceeef;
+}
+.projects-section {
+  background-color: #f7f7f9;
+}
+.text-container {
+  padding: 5vh 30px 0px 30px;
+  /*padding: 30px; */
+}
+.thumb {
+  background-image: url("../img/intro-background-thumb.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 590px;
+  height: 45vh;
+  max-height: 60%;
 }
 
-.projects-section {
-    background: #eee;
+/*
+Navbar and all elements in it
+*/
+li {
+  padding-right: 15px;
 }
 
 .navbar-light .container {
-    width: 100%;
+  width: 100%;
 }
-
+.navbar-light .container>button {
+  border: none !important;
+}
 .navbar.navbar-light {
-    background-color: var(--navbar-color);
-    border-bottom: 1px solid var(--navbar-border-botom);
-    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  background-color: var(--navbar-color);
+  border-bottom: 1px solid var(--navbar-border-botom);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
 }
-
-.navbar-light .navbar-nav .nav-link{
-    color: var(--theme-color);
-    display: -webkit-box;
-    outline: none;
-}
-
-#navbar-brand{
-    font-size: 1.5em;
-    color: rgba(0,0,0,0.20) !important;
-}
-
-
-.navbar-light .navbar-nav .nav-link,
-.navbar-light .navbar-toggler,
-#navbar-brand-spy,
-.btn-lg {
-    font-size: 1.25em;
-}
-
-.navbar-light .navbar-brand,
 .navbar-light .navbar-nav .nav-link {
-    margin-left: 5%;
-    -webkit-box-pack: justify;
-    -webkit-box-align: center;
+  color: rgba(255,255,255,0.4);
+  display: -webkit-box;
+  outline: none;
+}
+#navbar-brand {
+  font-size: 1.5em;
+  color: rgba(0, 0, 0, 0.20) !important;
+}
+.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-toggler, #navbar-brand-spy, .btn-lg {
+  font-size: 1.5rem;
+}
+.navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
+  margin-left: 5%;
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+}
+.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav>li>a:hover, .navbar-light .navbar-nav>li>a:focus {
+  border-bottom: none;
 }
 
-.navbar-light .navbar-nav .nav-link,
-.navbar-light .navbar-nav > li > a:hover,
-.navbar-light .navbar-nav > li > a:focus {
-    border-bottom: none;
+.navbar-light .navbar-brand, .navbar-light .navbar-nav>li>a:hover, .navbar-light .navbar-nav>li>a:focus {
+  color: white !important;
 }
 
-.navbar-light .navbar-brand,
-.navbar-light .navbar-nav > li > a:hover,
-.navbar-light .navbar-nav > li > a:focus {
-    color: var(--theme-color-hover) !important;
-}
+/*
+Other elements
+*/
+
+
+
 
 .btn-lg {
-    padding-right: 2em;
-    padding-left: 2em;
+  padding-right: 2em;
+  padding-left: 2em;
 }
 
 .button-wrapper {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
 }
 
-.phone-background{
-    position: relative;
-    display: block;
-    top: 0;  bottom: 0;  left: 0;  right: 0;
-    margin: auto;
-    height: auto; width: auto;
-    max-height: 80vh;   max-width: 80vh;
+.phone-background {
+  background-image: url("../img/google_blue.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto; /*=cover */
+
+  height: 65vh;
+  width: 45vh;
+  max-height: 80vh;
+  max-width: 80vh;
+  /*
+  position: relative;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: auto;
+  width: auto;
+  max-height: 80vh;
+  max-width: 80vh; */
 }
 
-.phone-display{
-    /*used for the screenshots later*/
-    z-index: 2;
+.phone-display {
+  /*used for the screenshots later*/
+  z-index: 2;
 }
