@@ -77,18 +77,29 @@ p {
   background-color: #eceeef;
 }
 .projects-section {
-  background-color: #f7f7f9;
+    background-color: #eceeef;
+  /*background-color: #f7f7f9; */
 }
 .text-container {
   padding: 5vh 30px 5vh 30px;
 }
 .thumb {
-  background-image: url("../img/intro-background-thumb.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.thumb-intro{
   min-height: 660px;
   height: 45vh;
   max-height: 55vh;
+  background-image: url("../img/intro-background-thumb.png");
+}
+
+.thumb-projects{
+  min-height: 600px;
+  height: 45vh;
+  max-height: 55vh;
+  background-image: url("../img/projects-background-thumb.png");
 }
 
 /*
