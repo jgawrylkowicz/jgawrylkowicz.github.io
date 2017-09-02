@@ -103,7 +103,8 @@ p {
 Navbar and all elements in it
 */
 li {
-  padding-right: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .navbar-light .container {
@@ -147,11 +148,24 @@ Other elements
 */
 
 
-
-
 .btn-lg {
-  padding-right: 2em;
-  padding-left: 2em;
+  border: 2px solid #8e6677;
+  border-image-source: : linear-gradient(#8e6677, #618099);
+  border-image-slice: 3;
+  background-size: 200% auto;
+  padding: 1rem 3rem 1rem 3rem;
+  text-align: center;
+  font-weight: 300;
+  transition: 1s;
+  color:  #8e6677;
+}
+.btn:hover {
+  background-image: linear-gradient(to left, #618099 0%, #8e6677 51%, #618099 100%);
+  border: 2px solid #8e6677;
+}
+
+
+.btn-outline-primary{
 }
 
 .button-wrapper {
