@@ -8,29 +8,25 @@ $("#projects-link").on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({
         scrollTop: $("#projects").offset().top
-    }, 300);
+    }, 750, 'easeOutQuad');
 });
 
 $("#contact-link").on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({
         scrollTop: $("#contact").offset().top
-    }, 300);
+    }, 750, 'easeOutQuad');
 });
 
 $("#intro-link").on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({
         scrollTop: $("#intro").offset().top
-    }, 300);
+    }, 750, 'easeOutQuad');
 });
 
 function init(){
-    $('.loader').fadeOut(500, function () {
-        showActiveSection();
-        resizeSection();
-        $('.section').fadeTo(250, 1);
-    });
+    showActiveSection();
 }
 
 
@@ -69,4 +65,3 @@ function showActiveSection(){
 
 window.onload = init();
 window.onload = showActiveSection();
-

@@ -22,18 +22,27 @@ html {
   height: 100%;
 }
 h1 {
-  font-size: 2.5em;
-  font-weight: 500 !important;
+  font-size: 2.5rem;
   padding-bottom: 50px;
 }
 h2 {
-  font-size: 2em;
+  font-size: 2rem;
+  padding-bottom: 40px;
 }
 h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
+  padding-bottom: 30px;
 }
+
+h1,h2,h3{
+  text-align: left;
+  font-weight: 700 !important;
+}
+
 p {
-  font-size: 1em;
+  font-size: 1rem;
+  font-weight: 300 !important;
+  padding-bottom: 50px;
 }
 
 
@@ -47,7 +56,7 @@ p {
     and also extends the section if the content requires it. */
   height: auto;
   min-height: 100vh;
-  width: 60%;
+  width: 55%;
   min-width: 768px;
   max-width: 1024px;
   font-size: 1em;
@@ -71,16 +80,15 @@ p {
   background-color: #f7f7f9;
 }
 .text-container {
-  padding: 5vh 30px 0px 30px;
-  /*padding: 30px; */
+  padding: 5vh 30px 5vh 30px;
 }
 .thumb {
   background-image: url("../img/intro-background-thumb.png");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 590px;
+  min-height: 660px;
   height: 45vh;
-  max-height: 60%;
+  max-height: 55vh;
 }
 
 /*
@@ -111,7 +119,7 @@ li {
   color: rgba(0, 0, 0, 0.20) !important;
 }
 .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-toggler, #navbar-brand-spy, .btn-lg {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
   margin-left: 5%;
