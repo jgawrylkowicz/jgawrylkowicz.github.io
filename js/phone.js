@@ -7,11 +7,9 @@ var images = [
 ];
 
 function preloadImages() {
-
-  imageObj = new Image();
-
   var i=0;
   for (let image of images){
+    imageObj = new Image();
     imageObj.src = images[i++]
   }
 }

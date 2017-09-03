@@ -59,6 +59,7 @@ button {
   color:  #8e6677;
   transition: all ease 0.8s;
   -webkit-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
 	-moz-transition: all ease 0.8s;
 
 }
@@ -83,11 +84,9 @@ button:hover {
   max-width: 1024px;
   font-size: 1em;
   text-align: justify;
-
   padding-left: 0;
   padding-right: 0;
   box-shadow: 0px 32px 32px 0px rgba(0, 0, 0, 0.3);
-
 }
 .intro-section {
   margin-top: 15vh;
@@ -95,13 +94,13 @@ button:hover {
 .contact-section{
   margin-bottom: 20vh;
 }
-.intro-section, .contact-section{
-  background-color: #eceeef;
+.intro-section,
+.contact-section,
+.projects-section{
+  background-color: #f7f7f9;
 }
-.projects-section {
-    background-color: #eceeef;
-  /*background-color: #f7f7f9; */
-}
+
+
 .text-container {
   padding: 5vh 30px 5vh 30px;
 }
@@ -112,11 +111,9 @@ button:hover {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .thumb-intro{
   background-image: url("../img/intro-background-thumb.png");
 }
-
 .thumb-projects{
   background-image: url("../img/projects-background-thumb.png");
 }
@@ -157,26 +154,20 @@ li {
   -webkit-box-pack: justify;
   -webkit-box-align: center;
 }
-.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav>li>a:hover, .navbar-light .navbar-nav>li>a:focus {
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav>li>a:hover,
+.navbar-light .navbar-nav>li>a:focus {
   border-bottom: none;
 }
-
-.navbar-light .navbar-brand, .navbar-light .navbar-nav>li>a:hover, .navbar-light .navbar-nav>li>a:focus {
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav>li>a:hover,
+.navbar-light .navbar-nav>li>a:focus {
   color: white !important;
 }
 
 /*
-Other elements
+Phone background and display
 */
-
-
-
-
-.button-wrapper {
-  padding-top: 1em;
-  padding-bottom: 1em;
-  text-align: center;
-}
 
 .phone-background,
 .phone-display{
@@ -185,11 +176,13 @@ Other elements
   max-height: 80vh;
   max-width: 80vh;
 }
-
-.phone-display{
-
+.phone-background {
+  z-index: 1;
+  background-image: url("../img/google_blue.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto; /*=cover */
 }
-
 .sp{
   position: relative;
   background-image: url("../img/spotter/6.png");
@@ -200,9 +193,7 @@ Other elements
   -moz-transition: background-image  0.25s ease-in-out;
   -o-transition: background-image  0.25s ease-in-out;
   transition: background-image  0.25s ease-in-out;
-
 }
-
 #tabs{
   z-index: 3;
   bottom: 10.2vh;
@@ -211,15 +202,12 @@ Other elements
   height: 2.5vh;
   position: absolute;
 }
-
-
 #link1, #link2, #link3, #link4{
   position: absolute;
   width: 2.5vh;
   height: 2.5vh;
   cursor: pointer; cursor: hand;
 }
-
 #link1{
   left: 1.5vh;
 }
@@ -233,10 +221,12 @@ Other elements
   left: 21vh;
 }
 
-.phone-background {
-  z-index: 1;
-  background-image: url("../img/google_blue.png");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 100% auto; /*=cover */
+/*
+Other elements
+*/
+
+.button-wrapper {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
 }
