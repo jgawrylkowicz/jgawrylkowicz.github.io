@@ -45,6 +45,28 @@ p {
   padding-bottom: 50px;
 }
 
+button {
+  border: 2px solid #8e6677;
+  border-image-source: : linear-gradient(#8e6677, #618099);
+  border-image-slice: 3;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  background: transparent;
+  background-size: 200% auto;
+  padding: 1rem 3rem 1rem 3rem;
+  text-align: center;
+  font-weight: 300;
+  color:  #8e6677;
+  transition: all ease 0.8s;
+  -webkit-transition: all ease 0.8s;
+	-moz-transition: all ease 0.8s;
+
+}
+button:hover {
+  background-image: linear-gradient(to right, #618099 0%, #8e6677 51%, #618099 100%);
+  color: white;
+}
+
 
 
 .content {
@@ -127,7 +149,7 @@ li {
   font-size: 1.5em;
   color: rgba(0, 0, 0, 0.20) !important;
 }
-.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-toggler, #navbar-brand-spy, .btn-lg {
+.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-toggler, #navbar-brand-spy {
   font-size: 1.2rem;
 }
 .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
@@ -148,25 +170,7 @@ Other elements
 */
 
 
-.btn-lg {
-  border: 2px solid #8e6677;
-  border-image-source: : linear-gradient(#8e6677, #618099);
-  border-image-slice: 3;
-  background-size: 200% auto;
-  padding: 1rem 3rem 1rem 3rem;
-  text-align: center;
-  font-weight: 300;
-  transition: 1s;
-  color:  #8e6677;
-}
-.btn:hover {
-  background-image: linear-gradient(to left, #618099 0%, #8e6677 51%, #618099 100%);
-  border: 2px solid #8e6677;
-}
 
-
-.btn-outline-primary{
-}
 
 .button-wrapper {
   padding-top: 1em;
@@ -174,31 +178,65 @@ Other elements
   text-align: center;
 }
 
-.phone-background {
-  background-image: url("../img/google_blue.png");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 100% auto; /*=cover */
-
+.phone-background,
+.phone-display{
   height: 65vh;
   width: 45vh;
   max-height: 80vh;
   max-width: 80vh;
-  /*
-  position: relative;
-  display: block;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  height: auto;
-  width: auto;
-  max-height: 80vh;
-  max-width: 80vh; */
 }
 
-.phone-display {
-  /*used for the screenshots later*/
-  z-index: 2;
+.phone-display{
+
+}
+
+.sp{
+  position: relative;
+  background-image: url("../img/spotter/1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 57.8% auto;
+  -webkit-transition: background-image  0.25s ease-in-out;
+  -moz-transition: background-image  0.25s ease-in-out;
+  -o-transition: background-image  0.25s ease-in-out;
+  transition: background-image  0.25s ease-in-out;
+
+}
+
+#tabs{
+  z-index: 3;
+  bottom: 10.2vh;
+  left: 10vh;
+  width: 25vh;
+  height: 2.5vh;
+  position: absolute;
+}
+
+
+#link1, #link2, #link3, #link4{
+  position: absolute;
+  width: 2.5vh;
+  height: 2.5vh;
+  cursor: pointer; cursor: hand;
+}
+
+#link1{
+  left: 1.5vh;
+}
+#link2{
+  left: 8vh;
+}
+#link3{
+  left: 14.5vh;
+}
+#link4{
+  left: 21vh;
+}
+
+.phone-background {
+  z-index: 1;
+  background-image: url("../img/google_blue.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto; /*=cover */
 }

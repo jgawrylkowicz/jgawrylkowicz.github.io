@@ -2,8 +2,6 @@
  * Jakub Gawrylkowicz 09/07/17
  */
 
-//TODO could use some rewriting
-
 $("#projects-link").on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({
