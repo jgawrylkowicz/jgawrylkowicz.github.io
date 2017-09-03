@@ -1,7 +1,7 @@
 
 var images = [
-  "./img/spotter/1.png",
-  "./img/spotter/2.png",
+  "./img/spotter/7.png",
+  "./img/spotter/6.png",
   "./img/spotter/3.png",
   "./img/spotter/4.png"
 ];
