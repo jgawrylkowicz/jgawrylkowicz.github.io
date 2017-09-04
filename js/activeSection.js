@@ -44,6 +44,8 @@ function showActiveSection(){
         $('#projects-link').focus();
         activeSection = 'Projects';
         $('.active-section').html(activeSection);
+        //idea for later, changing background-image, but it's too distracting right now in the current setting
+        //$('body').css("background-image", "url('./img/projects-background-thumb.png')");
     }
     else if (verticalScrollHeight > projectsSectionHeight
         && verticalScrollHeight <= contactSectionHeight) {
@@ -56,6 +58,7 @@ function showActiveSection(){
         activeSection = 'Home';
         $('#intro-link').focus();
         $('.active-section').html(activeSection);
+        //$('body').css("background-image", "url('./img/intro-background.jpg')");
     }
 
 }

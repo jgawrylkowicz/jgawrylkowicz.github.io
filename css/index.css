@@ -16,6 +16,7 @@ body {
   background-position: right top;
   background-attachment: fixed;
   background-size: cover;
+  transition: background-image ease 0.8s;
 }
 html {
   width: 100%;
@@ -171,24 +172,23 @@ Phone background and display
 
 .phone-background,
 .phone-display{
-  height: 65vh;
+  height: 68vh;
   width: 45vh;
   max-height: 80vh;
   max-width: 80vh;
 }
 .phone-background {
-  z-index: 1;
   background-image: url("../img/google_blue.png");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 100% auto; /*=cover */
+  background-size: 105% auto; /*100%*/ /*=cover */
 }
 .sp{
   position: relative;
   background-image: url("../img/spotter/6.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 57.8% auto;
+  background-size: 60.8% auto; /*57.8% auto;*/
   -webkit-transition: background-image  0.25s ease-in-out;
   -moz-transition: background-image  0.25s ease-in-out;
   -o-transition: background-image  0.25s ease-in-out;
@@ -196,7 +196,7 @@ Phone background and display
 }
 #tabs{
   z-index: 3;
-  bottom: 10.2vh;
+  bottom: 10.5vh;
   left: 10vh;
   width: 25vh;
   height: 2.5vh;
