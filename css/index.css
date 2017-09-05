@@ -16,6 +16,7 @@ body {
   background-position: right top;
   background-attachment: fixed;
   background-size: cover;
+  -webkit-transition: background-image ease 0.8s;
   transition: background-image ease 0.8s;
 }
 html {
@@ -46,15 +47,6 @@ p {
   padding-bottom: 50px;
 }
 
-p.info{
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  opacity: 0.5;
-  font-size: 0.75rem;
-  font-weight: 300;
-}
-
 button  {
   border: 2px solid #8e6677;
   border-image-slice: 3;
@@ -73,9 +65,7 @@ button  {
 }
 
 button:hover {
-  background-image: -webkit-linear-gradient(to right, #618099 0%, #8e6677 51%, #618099 100%);
-  background-image: -moz-linear-gradient(to right, #618099 0%, #8e6677 51%, #618099 100%);
-  background-image: -o-linear-gradient(to right, #618099 0%, #8e6677 51%, #618099 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#618099), color-stop(51%, #8e6677), to(#618099));
   background-image: linear-gradient(to right, #618099 0%, #8e6677 51%, #618099 100%);
   background-color: #8e6677;
   color: white;
@@ -100,7 +90,8 @@ button:hover {
   text-align: justify;
   padding-left: 0;
   padding-right: 0;
-  box-shadow: 0px 32px 32px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 32px 32px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 32px 32px 0px rgba(0, 0, 0, 0.3);
 }
 .intro-section {
   margin-top: 15vh;
@@ -149,7 +140,8 @@ li {
 .navbar.navbar-light {
   background-color: var(--navbar-color);
   border-bottom: 1px solid var(--navbar-border-botom);
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
 }
 .navbar-light .navbar-nav .nav-link {
   color: rgba(255,255,255,0.4);
@@ -183,66 +175,52 @@ li {
 Phone background and display
 */
 
-/*
-.phone-background{
+#wrapper{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#phone-background{
+  height: auto;
+  width: 100%;
   position: relative;
-  height: 100%;
-  width: 100%;
-  margin-left:auto;
-  margin-right:auto;
-  display:block;
-
 }
 
-.phone-display{
-  position: absolute;
-  height: 69.5%;
-  width: auto;
-  top: 13.95%;
-  left: 22.8%;
-}
-*/
-
-
-#phone-background,
 #phone-display{
-  background-color: rgba(0,0,0,0.1);
-  width: 100%;
-  height: 60vh;
-
-}
-#phone-background {
-  background-image: url("../img/google_blue.png");
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/spotter/1.png");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-}
-.sp{
-
-  background-image: url("../img/spotter/6.png");
-  background-repeat: no-repeat;
-  /*background-position: center;*/
   background-position: center;
   background-size: 57.8% auto;
   -webkit-transition: background-image  0.25s ease-in-out;
-  -moz-transition: background-image  0.25s ease-in-out;
-  -o-transition: background-image  0.25s ease-in-out;
   transition: background-image  0.25s ease-in-out;
+}
+#info{
+  color: rgba(0,0,0,0.4);
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+.important{
+  color: #8e6677;
 }
 
 #tabs{
-/*  background-color: rgba(0,0,255,0.5);*/
   z-index: 3;
-  bottom: 25%;
-  left: 9.12vh;
-  width: 70%;
-  height: 3.74vh;
-  position: relative;
+  bottom: 15.2%;
+  left: 21.2%;
+  width: 57.68%;
+  height: 6%;
+  position: absolute;
 }
 #link1, #link2, #link3, #link4{
-
   position: absolute;
-  width: 3.74vh;
+  width: 15%;
   height: 100%;
   cursor: pointer; cursor: hand;
 }
