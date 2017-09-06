@@ -28,6 +28,11 @@ body {
     background-image: url("../img/intro-background-2.jpg");
   }
 }
+@media only screen and (orientation: portrait) and (max-width: 1000px){
+  body{
+    background-image: url("../img/intro-background-3.jpg");
+  }
+}
 
 
 html {
