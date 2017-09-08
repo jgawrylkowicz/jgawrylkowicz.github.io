@@ -16,39 +16,34 @@
 
 </head>
 
-<body onscroll="showActiveSection()">
+<body data-spy="scroll" data-target=".navbar" data-offset="550">
+  <!--onscroll="showActiveSection()"-->
 
-  <nav id="navbar" class="navbar navbar-toggleable navbar-light fixed-top bg-faded">
+  <nav id="navbar" class="navbar navbar-toggleable navbar-light fixed-top bg-faded transparent">
 
     <div class="container-fluid">
 
-      <!--
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    --->
-
-      <a id="navbar-brand-spy" class="navbar-brand hidden-sm-up" data-toggle="collapse" data-target=".navbar-collapse.show">
+      <a class="navbar-brand hidden-sm-up">
         <div class="active-section"></div>
       </a>
 
-      <div class="collapse navbar-collapse" id="collapsingNavbar">
-        <ul id="navbarSpy" class="nav navbar-nav">
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
           <li class="nav-item">
-            <a id="intro-link" class="nav-link" tabindex="1" data-toggle="collapse" data-target=".navbar-collapse.show" href="#intro">Home</a>
+            <a id="intro-link" class="nav-link" tabindex="1" href="#intro">Home</a>
           </li>
           <li class="nav-item">
-            <a id="projects-link" class="nav-link" tabindex="2" data-toggle="collapse" data-target=".navbar-collapse.show" href="#projects">Projects</a>
+            <a id="projects-link" class="nav-link" tabindex="2" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a id="contact-link" class="nav-link" tabindex="3" data-toggle="collapse" data-target=".navbar-collapse.show" href="#contact">Contact</a>
+            <a id="contact-link" class="nav-link" tabindex="3" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
     </div>
 
   </nav>
-  <div id="spyOnContent" data-aos="fade-zoom-in" class="content" data-target="#navbarSpy" data-spy="scroll">
+  <div data-aos="fade-zoom-in">
 
     <div id="intro" class="container-fluid section">
 
@@ -201,20 +196,9 @@
 
   <script src="js/jquery-3.2.1.js"></script>
   <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/activeSection.js"></script>
-  <script src="js/phone.js"></script>
-  <script src="js/bootstrap.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="js/aos.js"></script>
-  <script>
-    AOS.init({
-      disable: 'mobile',
-      offset: 200,
-      duration: 600,
-      easing: 'ease-in-sine',
-      delay: 100,
-      once: true
-    });
-  </script>
+  <script src="js/index.js"></script>
 
 </body>
 
