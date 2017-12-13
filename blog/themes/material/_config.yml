@@ -34,22 +34,24 @@ scheme: Isolation
 # UI & UX: slogan, color, effect
 uiux:
     slogan: "Hi, nice to meet you"
-    theme_color: "#0097A7"
-    theme_sub_color: "#00838F"
-    hyperlink_color: "#00838F"
-    button_color: "#757575"
+    theme_color: "#000"
+    theme_sub_color: "#000"
+    hyperlink_color: "#000"
+    button_color: "#000"
     android_chrome_color: "#0097A7"
-    nprogress_color: "#29d"
+    nprogress_color: "#000"
     nprogress_buffer: "800"
+    radius: "0px"
+    post_shadow: "0 8px 16px 0 rgba(0,0,0,.1)"
 
 # JS Effect Switches
 js_effect:
     fade: true
-    smoothscroll: true
+    smoothscroll: false
 
 # Reading experience
 reading:
-    entry_excerpt: 80
+    entry_excerpt: 300
 
 # Thumbnail Settings
 thumbnail:
@@ -62,9 +64,9 @@ thumbnail:
 #        color available value: black, blue, brown, green, multi, orange, pink, purple, red, white, yellow
 #        type available value: A (animal), C (culture), N (nature), S (space), T (travel)
 background:
-    gradient: "linear-gradient(to right, #868f96 0%, #596164 100%)"
+    # gradient: "radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%)"
     # purecolor: ""
-    # bgimg: "/img/bg.png"
+    bgimg: "/img/intro-background-1.jpg"
     bing:
         enable: false
         parameter:
@@ -75,7 +77,6 @@ img:
     avatar: "/img/avatar.png"
     daily_pic: "/img/daily_pic.png"
     sidebar_header: "/img/sidebar_header.png"
-    random_thumbnail: "/img/random/material-"
     footer_image:
         #upyun_logo:
             #link: "https://www.upyun.com/"
@@ -137,6 +138,9 @@ hanabi:
     line_number: true
     includeDefaultColors: true
     customColors:
+
+tilt:
+  enable: true
 
 # Post License
 # You can specify the text you want to show in the end of your posts and pages, HTML tag is supported.

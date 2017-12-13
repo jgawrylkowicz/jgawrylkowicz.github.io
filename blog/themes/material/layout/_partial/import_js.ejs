@@ -78,6 +78,12 @@
     <% } %>
 <% } %>
 
+
+<% if (theme.tilt.enable) { %>
+  <%- jsLsload({path:('js/tilt.jquery.min.js'),key:'tilt'}) %>
+<% } %>
+
+
 <!-- Window Load -->
 <!-- add class for prettify -->
 <script type="text/ls-javascript" id="window-load">

@@ -103,8 +103,6 @@
     </style>
 <% } %>
 
-
-
 <!-- Fade Effect -->
 <% if(theme.js_effect.fade === true) { %>
     <style>
@@ -126,3 +124,30 @@
 
 <!-- Import Font -->
 <%- partial('_partial/config_font') %>
+
+<!-- Other settings !-->
+<style>
+  body {
+    background-blend-mode: screen;
+  }
+
+  #scheme-Isolation .post_entry-module {
+    border-radius: <%= (theme.uiux.radius) ? theme.uiux.radius : "12px" %>;
+    box-shadow: <%= (theme.uiux.post_shadow) ? theme.uiux.post_shadow : "0 1px 1px 0 rgba(0,0,0,.1)" %>;
+    -webkit-box-shadow: <%= (theme.uiux.post_shadow) ? theme.uiux.post_shadow : "0 1px 1px 0 rgba(0,0,0,.1)" %>;
+  }
+  #scheme-Isolation .material-post .mdl-card {
+    border-radius: <%= (theme.uiux.radius) ? theme.uiux.radius : "12px" %>;
+    box-shadow: <%= (theme.uiux.post_shadow) ? theme.uiux.post_shadow : "0 1px 1px 0 rgba(0,0,0,.1)" %>;
+    -webkit-box-shadow: <%= (theme.uiux.post_shadow) ? theme.uiux.post_shadow : "0 1px 1px 0 rgba(0,0,0,.1)" %>;
+  }
+
+  #scheme-Isolation .post_entry-title {
+    margin-bottom: 0px;
+  }
+  #scheme-Isolation .post_entry-header_info.without-thumbnail{
+    padding-bottom: 24px;
+    /*background-image: linear-gradient(to right, #d9afd9 0%, #97d9e1 100%) ; */
+
+  }
+</style>
