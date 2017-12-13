@@ -40,8 +40,8 @@ uiux:
     button_color: "#000"
     android_chrome_color: "#0097A7"
     nprogress_color: "#000"
-    nprogress_buffer: "800"
-    radius: "0px"
+    nprogress_buffer: "300"
+    radius: "12px"
     post_shadow: "0 8px 16px 0 rgba(0,0,0,.1)"
 
 # JS Effect Switches
@@ -64,9 +64,9 @@ thumbnail:
 #        color available value: black, blue, brown, green, multi, orange, pink, purple, red, white, yellow
 #        type available value: A (animal), C (culture), N (nature), S (space), T (travel)
 background:
-    # gradient: "radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%)"
-    # purecolor: ""
-    bgimg: "/img/intro-background-1.jpg"
+    # gradient: "linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%)"
+    purecolor: "#F6F6F6"
+    # bgimg: "/img/intro-background-1.jpg"
     bing:
         enable: false
         parameter:
