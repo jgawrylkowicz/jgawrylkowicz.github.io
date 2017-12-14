@@ -1,4 +1,4 @@
-<div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+<div id="post-content" class="mdl-card__supporting-text fade out">
     <% if(theme.scheme === 'Paradox') { %>
         <%- page.content %>
         <% if (page.hide_license !== true && theme.license || page.license) { %>
@@ -6,7 +6,7 @@
                     <p><strong>
                         <% if (page.license) { %>
                             <%- page.license %>
-                        <% } else { %> 
+                        <% } else { %>
                             <%- theme.license %>
                         <% } %></strong>
                         <br>
@@ -18,16 +18,13 @@
 
     <% if(theme.scheme === 'Isolation') { %>
         <div class="post-content_wrapper">
-            <p class="post-title">
-                <%- page.title %>
-            </p>
             <%- page.content %>
             <% if (page.license || theme.license) { %>
                 <blockquote>
                     <p>
                         <% if (page.license) { %>
                             <%- page.license %>
-                        <% } else { %> 
+                        <% } else { %>
                             <%- theme.license %>
                         <% } %>
                         <br>

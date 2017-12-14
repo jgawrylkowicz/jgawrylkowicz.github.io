@@ -26,8 +26,9 @@
         <!-- Post Header Info -->
         <div class="post-header_info without-thumbnail">
             <!-- Author Avatar & Name -->
-            <img src="<%= url_for(theme.img.avatar) %>" class="avatar-img" width="44px" height="44px" alt="<%= config.author %>'s avatar">
-            <span class="name-span"><%= config.author %></span>
+            <p class="post_entry-title">
+                <%= page.title %>
+            </p>
         </div>
 
         <!-- Null Thumbnail -->
@@ -35,9 +36,7 @@
     <% } else { %>
         <!-- Post Header Info -->
         <div class="post-header_info with-thumbnail">
-            <!-- Author Avatar & Name -->
-            <img src="<%= url_for(theme.img.avatar) %>" class="avatar-img" width="44px" height="44px" alt="<%= config.author %>'s avatar">
-            <span class="name-span"><%= config.author %></span>
+
         </div>
 
         <!-- Custom thumbnail -->
