@@ -51,7 +51,7 @@ js_effect:
 
 # Reading experience
 reading:
-    entry_excerpt: 300
+    entry_excerpt: 600
 
 # Thumbnail Settings
 thumbnail:
@@ -91,6 +91,7 @@ img:
 #          to /source/data/head.yml as custom code, to load custom font files.
 fonts:
     family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
+    #family: Roboto
     use: google
     custom_font_host:
 
