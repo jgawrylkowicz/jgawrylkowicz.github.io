@@ -33,7 +33,7 @@ scheme: Isolation
 
 # UI & UX: slogan, color, effect
 uiux:
-    slogan: "Hi, nice to meet you"
+    slogan: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
     theme_color: "#000"
     theme_sub_color: "#000"
     hyperlink_color: "#000"
