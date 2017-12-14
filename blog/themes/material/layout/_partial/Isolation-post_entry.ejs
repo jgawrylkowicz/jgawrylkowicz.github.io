@@ -1,6 +1,9 @@
 
 <div class="post_entry-module mdl-card <% if(theme.card_elevation) { %><%= 'mdl-shadow--' + theme.card_elevation + 'dp' %><% } %> mdl-cell mdl-cell--12-col fade out">
 
+    <div class="post_date">
+    <%= date(post.date, 'MMM DD, YYYY') %>
+    </div>
     <!-- Post_entry Header -->
     <% if(!post.thumbnail) { %>
         <!-- Post Header Info -->
@@ -42,22 +45,24 @@
             </span>
         </p>
 
-        <!-- Post Tags -->
-        <%- list_tags(post.tags, {
-              show_count: false,
-              class: 'post_entry-tags',
-              style: 'list',
-              separator: ''
-        }) %>
+
+
     </div>
 
     <!-- Post_entry Footer -->
     <div class="post_entry-footer">
-        <div class="post_entry-footer-border"></div>
+
         <div class="post_entry-footer-info">
-            <div class="post_entry-footer-date">
-                <%= date(post.date, 'MMM DD, YYYY') %>
-            </div>
+              <!-- Post Tags -->
+              <%- list_tags(post.tags, {
+                  show_count: false,
+                  class: 'post_entry-tags',
+                  style: 'list',
+                  separator: ''
+            }) %>
+            <!--<div class="post_entry-footer-date">
+
+            </div> -->
             <div class="post_entry-footer-comment">
                 <% if(theme.comment.use === 'duoshuo') { %>
                     <!-- Comment Number -->

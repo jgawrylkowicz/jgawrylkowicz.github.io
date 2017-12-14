@@ -1,7 +1,7 @@
 ---
 title: Lorem ipsum dolor
 date: 2017-12-13 14:27:14
-tags:
+tags: [Javascript, Distributed Systems ]
 # thumbnail: img/intro-background-thumb.png
 ---
 
