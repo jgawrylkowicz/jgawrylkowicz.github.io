@@ -43,6 +43,7 @@ uiux:
     nprogress_buffer: "300"
     radius: "12px"
     post_shadow: "0 8px 16px 0 rgba(0,0,0,.2)"
+    copyright: true
 
 # JS Effect Switches
 js_effect:

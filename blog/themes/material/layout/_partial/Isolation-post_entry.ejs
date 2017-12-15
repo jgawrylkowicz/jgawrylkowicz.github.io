@@ -1,9 +1,7 @@
 
 <div class="post_entry-module mdl-card <% if(theme.card_elevation) { %><%= 'mdl-shadow--' + theme.card_elevation + 'dp' %><% } %> mdl-cell mdl-cell--12-col fade out">
 
-    <div class="post_date">
-    <%= date(post.date, 'MMM DD, YYYY') %>
-    </div>
+
     <!-- Post_entry Header -->
     <% if(!post.thumbnail) { %>
         <!-- Post Header Info -->
@@ -12,6 +10,9 @@
             <p class="post_entry-title">
                 <a href="<%= url_for(post.path) %>"><% if(pin) { %><span>[Top]</span><% } %><%= post.title %></a>
             </p>
+            <div class="post_date">
+            <%= date(post.date, 'MMM DD, YYYY') %>
+            </div>
         </div>
 
         <!-- Null Thumbnail -->
@@ -30,8 +31,9 @@
     <% } %>
         </div>
 
+
     <!-- Post_entry Content -->
-    <div class="post_entry-content mdl-color-text--grey-600 mdl-card__supporting-text">
+    <div class="post_entry-content mdl-card__supporting-text">
         <!-- Post Excerpt -->
         <p class="post_entry-excerpt">
             <%if(post.excerpt) {%>

@@ -1,6 +1,7 @@
 <header class="header">
     <div class="header-wrapper">
         <!-- Header Copyright -->
+        <% if(theme.uiux.copyright) { %>
         <div class="header-copyright">
             <div class="header-site">
                 ©&nbsp;
@@ -23,6 +24,7 @@
                 Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a>
             </div>
         </div>
+        <% } %>
 
         <!-- Header Title -->
         <span class="header-title header-item">
@@ -57,7 +59,7 @@
                     </a>
                 </span>
             <% } %>
-            
+
         </nav>
 
         <!-- Header SNS -->

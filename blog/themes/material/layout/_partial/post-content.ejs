@@ -35,3 +35,16 @@
         </div>
     <% } %>
 </div>
+
+<div class="post_entry-footer">
+
+    <div class="post_entry-footer-info">
+          <!-- Post Tags -->
+          <%- list_tags(page.tags, {
+              show_count: false,
+              class: 'post_entry-tags',
+              style: 'list',
+              separator: ''
+        }) %>
+    </div>
+</div>
