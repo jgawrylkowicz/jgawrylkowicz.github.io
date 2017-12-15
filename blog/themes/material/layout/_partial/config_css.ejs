@@ -98,7 +98,7 @@
 <% } else { %>
     <style>
       body{
-        background-image: url(<%= theme.background.bgimg %>);
+        background-image: url(<%= theme.background.bgimg %>)
       }
     </style>
 <% } %>
@@ -107,11 +107,9 @@
 <% if(theme.js_effect.fade === true) { %>
     <style>
       .fade {
+        -webkit-transition: all <%= theme.uiux.nprogress_buffer %>ms linear;
         transition: all <%= theme.uiux.nprogress_buffer %>ms linear;
         -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
         transform: translate3d(0,0,0);
         opacity: 1;
       }
@@ -161,20 +159,17 @@
   #scheme-Isolation .post_entry-module {
     border-radius: <%= (theme.uiux.radius) ? theme.uiux.radius : "12px" %>;
     box-shadow: <%= (theme.uiux.post_shadow) ? theme.uiux.post_shadow : "0 1px 1px 0 rgba(0,0,0,.1)" %>;
-    -webkit-box-shadow: <%= (theme.uiux.post_shadow) ? theme.uiux.post_shadow : "0 1px 1px 0 rgba(0,0,0,.1)" %>;
+    -webkit-box-shadow: <%= (theme.uiux.post_shadow) ? theme.uiux.post_shadow : "0 1px 1px 0 rgba(0,0,0,.1)" %>
   }
   #scheme-Isolation .material-post .mdl-card {
     border-radius: <%= (theme.uiux.radius) ? theme.uiux.radius : "12px" %>;
     box-shadow: <%= (theme.uiux.post_shadow) ? theme.uiux.post_shadow : "0 1px 1px 0 rgba(0,0,0,.1)" %>;
-    -webkit-box-shadow: <%= (theme.uiux.post_shadow) ? theme.uiux.post_shadow : "0 1px 1px 0 rgba(0,0,0,.1)" %>;
+    -webkit-box-shadow: <%= (theme.uiux.post_shadow) ? theme.uiux.post_shadow : "0 1px 1px 0 rgba(0,0,0,.1)" %>
   }
 
   #scheme-Isolation .post_entry-module:hover{
     transform: translate3d(0, -2px, 0);
     -webkit-transform: translate3d(0,-2px,0);
-    -moz-transform: translate3d(0,-2px,0);
-    -ms-transform: translate3d(0,-2px,0);
-    -o-transform: translate3d(0,-2px,0);
     transform: translate3d(0,-2px,0);
     box-shadow: 2px 16px 32px 0 rgba(0,0,0,.2);
     -webkit-box-shadow: 2px 16px 32px 0 rgba(0,0,0,.2);
@@ -191,7 +186,7 @@
   }
   #scheme-Isolation .post_entry-header_info.without-thumbnail{
     padding-bottom: 24px;
-    /*background-image: linear-gradient(to right, #d9afd9 0%, #97d9e1 100%) ; */
+    background-image: linear-gradient(to bottom, rgba(255, 175, 189, 0.2) 10%, rgba(255, 195, 160, 0.0) 90%);
   }
 
   .mdl-card__supporting-text {
