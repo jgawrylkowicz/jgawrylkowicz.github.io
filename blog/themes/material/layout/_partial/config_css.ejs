@@ -191,12 +191,12 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 33%;
+    height: 70%;
     opacity: 0.4;
     z-index: 2;
     transition: opacity .3s linear;
     transition-delay: 0.1s;
-    background-image: linear-gradient(to bottom, rgba(255, 175, 189, 0.2) 10%, rgba(255, 195, 160, 0.0) 90%);
+    background-image: linear-gradient(to bottom, rgba(255, 175, 189, 0.3) 10%, rgba(255, 195, 160, 0.0) 90%);
   }
 
   div.post_entry-header_info span {
@@ -251,11 +251,55 @@
   }
 
   .post_entry-tags-list-item:hover a {
-    color: black !important;
+    color: rgba(0,0,0,0.4) !important;
   }
   .post_entry-tags-list-item:hover{
-      border-color: black !important;
+      border-color: rgba(0,0,0,0.4) !important;
   }
+
+  .git-button  {
+    border: 1px solid #8e6677;
+    border-image-slice: 3;
+    font-family: Colfax Medium;
+    font-size: 1.2rem;
+    background: transparent;
+    border-radius: 6px;
+    background-size: 200% auto;
+    padding: 1rem 3rem 1rem 3rem;
+    text-align: center;
+    color:  #8e6677;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    text-decoration: none;
+  }
+
+  .git-button:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#618099), color-stop(51%, #8e6677), to(#618099));
+    background-image: linear-gradient(to right, #618099 0%, #8e66177 51%, #618099 100%);
+    background-color: #8e6677;
+    color: white;
+    border: 1px solid transparent;
+  }
+
+  .button-wrapper{
+    padding-bottom: 1pc;
+  }
+
+  div.post_thumbnail-custom{
+    padding-top: 3pc;
+    z-index: 10;
+  }
+
+  div.post_entry-header_info{
+    padding-top: 3pc;
+    padding-left: 3pc;
+    padding-right: 3pc;
+  }
+
+
+
 
 
 

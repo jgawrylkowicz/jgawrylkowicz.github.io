@@ -3,53 +3,45 @@
 
 
     <!-- Post_entry Header -->
-    <% if(!post.thumbnail) { %>
-        <!-- Post Header Info -->
-        <div class="post_entry-header_info without-thumbnail">
-            <!-- Author Avatar & Name -->
-            <span>
-              <p class="post_entry-title">
-                  <a href="<%= url_for(post.path) %>"><% if(pin) { %><span>[Top]</span><% } %><%= post.title %></a>
-              </p>
-              <div class="post_date">
-              <%= date(post.date, 'MMM DD, YYYY') %>
-              </div>
-            </span>
-        </div>
-
-        <!-- Null Thumbnail -->
-        <div class="post_thumbnail-null">
-    <% } else { %>
-        <!-- Post Header Info -->
-        <div class="post_entry-header_info with-thumbnail">
-            <!-- Author Avatar & Name -->
-            <img src="<%= url_for(theme.img.avatar) %>" class="avatar-img" width="44px" height="44px" alt="<%= config.author %>'s avatar">
-            <span class="name-span"><%= config.author %></span>
-        </div>
-
-        <!-- Custom thumbnail -->
+    <% if(post.thumbnail) { %>
         <div class="post_thumbnail-custom">
             <img src="<%= post.thumbnail %>">
-    <% } %>
         </div>
+    <% } %>
 
+
+    <div class="post_entry-header_info">
+        <p class="post_entry-title">
+            <a href="<%= url_for(post.path) %>"><% if(pin) { %><span>[Top]</span><% } %><%= post.title %></a>
+        </p>
+        <div class="post_date">
+        <%= date(post.date, 'MMM DD, YYYY') %>
+        </div>
+    </div>
 
     <!-- Post_entry Content -->
     <div class="post_entry-content mdl-card__supporting-text">
         <!-- Post Excerpt -->
         <p class="post_entry-excerpt">
+
+
             <%if(post.excerpt) {%>
                 <%- strip_html(post.excerpt) %>
-            <%}else{%>
+            <%}
+
+            else{%>
                 <%- strip_html(truncate(post.content,{length: theme.reading.entry_excerpt })) %>
             <%}%>
             &nbsp;&nbsp;&nbsp;
-            <span>
+            <!--<span>
                 <a href="<%= url_for(post.path) %>" target="_self"><%= __('post.continue') %></a>
             </span>
+            -->
+
         </p>
-
-
+        <div class="button-wrapper">
+          <a href="" class="git-button" role="button">More on  <i class="fa fa-gitlab fa-lg" aria-hidden="true"></i></a>
+        </div>
 
     </div>
 
