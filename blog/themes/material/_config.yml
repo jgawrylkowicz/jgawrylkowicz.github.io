@@ -65,7 +65,7 @@ thumbnail:
 #        color available value: black, blue, brown, green, multi, orange, pink, purple, red, white, yellow
 #        type available value: A (animal), C (culture), N (nature), S (space), T (travel)
 background:
-    gradient: "linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%)"
+    gradient: "linear-gradient(120deg, rgba(41,50,60, 0.1) 0%, rgba(72,85,99,0.4) 100%)"
     # purecolor: "#F6F6F6"
     # bgimg: "/img/intro-background-1.jpg"
     bing:
