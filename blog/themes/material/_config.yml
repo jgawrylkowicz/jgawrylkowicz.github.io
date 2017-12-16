@@ -42,7 +42,7 @@ uiux:
     nprogress_color: "#111"
     nprogress_buffer: "300"
     radius: "12px"
-    post_shadow: "0 8px 16px 0 rgba(0,0,0,.2)"
+    post_shadow: "0 4px 8px 0 rgba(0,0,0,.2)"
     copyright: false
 
 # JS Effect Switches
@@ -65,12 +65,7 @@ thumbnail:
 #        color available value: black, blue, brown, green, multi, orange, pink, purple, red, white, yellow
 #        type available value: A (animal), C (culture), N (nature), S (space), T (travel)
 background:
-    #gradient: "linear-gradient(to right, #0acffe 0%, #495aff 100%)"
-    #gradient: "linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%)"
-    #gradient: "linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%)"
-    #gradient: "linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%)"
     gradient: "linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%)"
-    #gradient: linear-gradient(to right, rgba(255, 195, 160, 0.2) 0%, rgba(255, 175, 189, 0.2) 100%)
     # purecolor: "#F6F6F6"
     # bgimg: "/img/intro-background-1.jpg"
     bing:

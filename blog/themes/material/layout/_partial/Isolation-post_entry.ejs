@@ -7,12 +7,14 @@
         <!-- Post Header Info -->
         <div class="post_entry-header_info without-thumbnail">
             <!-- Author Avatar & Name -->
-            <p class="post_entry-title">
-                <a href="<%= url_for(post.path) %>"><% if(pin) { %><span>[Top]</span><% } %><%= post.title %></a>
-            </p>
-            <div class="post_date">
-            <%= date(post.date, 'MMM DD, YYYY') %>
-            </div>
+            <span>
+              <p class="post_entry-title">
+                  <a href="<%= url_for(post.path) %>"><% if(pin) { %><span>[Top]</span><% } %><%= post.title %></a>
+              </p>
+              <div class="post_date">
+              <%= date(post.date, 'MMM DD, YYYY') %>
+              </div>
+            </span>
         </div>
 
         <!-- Null Thumbnail -->
