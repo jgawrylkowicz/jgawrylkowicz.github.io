@@ -2,7 +2,7 @@
 title: Spotter
 date: 2017-06-22 12:00:00
 tags: [Javascript, Typescript, Ionic, Angular]
-thumbnail: /img/spotter2.png
+thumbnail: /img/spotter.png
 
 ---
 "Spotter" is a simple Ionic based app I've been developing over the course of the 2017 semester for many reasons, mainly to learn JavaScript. In short, the idea of this app is to help the user to track his or her workout progress. The motive behind it was to make it as easy as possible for the user to start the training with little to none configuration.

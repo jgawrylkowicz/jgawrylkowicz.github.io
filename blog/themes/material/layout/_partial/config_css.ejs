@@ -160,7 +160,7 @@
     border-radius: <%= (theme.uiux.radius) ? theme.uiux.radius : "12px" %>;
     box-shadow: <%= (theme.uiux.post_shadow) ? theme.uiux.post_shadow : "0 1px 1px 0 rgba(0,0,0,.1)" %>;
     -webkit-box-shadow: <%= (theme.uiux.post_shadow) ? theme.uiux.post_shadow : "0 1px 1px 0 rgba(0,0,0,.1)" %>;
-    background: rgb(250, 250, 250);
+    background: rgb(247, 247, 247);
   }
   #scheme-Isolation .material-post .mdl-card {
     border-radius: <%= (theme.uiux.radius) ? theme.uiux.radius : "12px" %>;
@@ -170,33 +170,32 @@
   }
 
   #scheme-Isolation .post_entry-module:hover{
-    transform: translate3d(0, -2px, 0);
-    -webkit-transform: translate3d(0,-2px,0);
-    transform: translate3d(0,-2px,0);
+    transform: translate3d(0, -1px, 0);
+    -webkit-transform: translate3d(0,-1px,0);
+    transform: translate3d(0,-1px,0);
     box-shadow: 2px 16px 32px 0 rgba(0,0,0,.2);
     -webkit-box-shadow: 2px 16px 32px 0 rgba(0,0,0,.2);
-    background: rgb(255, 255, 255);
+    background: rgb(252, 252, 252);
     cursor: pointer;
   }
 
   .post_entry-module{
     padding-bottom: 24px;
-    background-image: linear-gradient(to bottom, rgba(255, 175, 189, 0.1) 10%, rgba(255, 195, 160, 0.0) 90%);
+    background-image: linear-gradient(to top, rgba(255, 175, 189, 0.05) 0%, rgba(255, 195, 160, 0.0) 90%);
     z-index: 1;
   }
 
   .post_entry-module::after{
     position: absolute;
     content: '';
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 70%;
+    height: 33%;
     opacity: 0.4;
     z-index: 2;
     transition: opacity .3s linear;
-    transition-delay: 0.1s;
-    background-image: linear-gradient(to bottom, rgba(255, 175, 189, 0.3) 10%, rgba(255, 195, 160, 0.0) 90%);
+    background-image: linear-gradient(to top, rgba(255, 175, 189, 0.1) 10%, rgba(255, 195, 160, 0.0) 90%);
   }
 
   div.post_entry-header_info span {
@@ -217,9 +216,6 @@
   #post-content, #post-content p{
     font-size: 1.3rem;
     line-height: 1.5;
-  }
-
-  .post_date{
   }
 
   #scheme-Isolation .post_entry-tags-list-item{
@@ -273,6 +269,7 @@
     -o-transition: all .3s linear;
     -moz-transition: all .3s linear;
     text-decoration: none;
+
   }
 
   .git-button:hover {
@@ -285,18 +282,30 @@
 
   .button-wrapper{
     padding-bottom: 1pc;
+    z-index:-1;
   }
 
   div.post_thumbnail-custom{
-    padding-top: 3pc;
-    z-index: 10;
+
+    /*
+      z-index: 10;
+      -webkit-mask-image:-webkit-gradient(
+      linear, left top, left bottom,
+      color-stop(0,  rgba(0,0,0,1)),
+      color-stop(.6,  rgba(0,0,0,8)),
+      color-stop(1,  rgba(0,0,0,0)));
+      */
+      border-bottom: 1px solid rgba(0,0,0,0.05);
   }
 
   div.post_entry-header_info{
-    padding-top: 3pc;
-    padding-left: 3pc;
-    padding-right: 3pc;
+    padding-bottom: 2pc;
   }
+  .post_date{
+    font-family: Colfax Regular;
+    font-size: 1.1rem;
+  }
+
 
 
 
