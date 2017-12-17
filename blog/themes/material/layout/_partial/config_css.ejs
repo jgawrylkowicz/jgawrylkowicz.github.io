@@ -170,9 +170,11 @@
   }
 
   #scheme-Isolation .post_entry-module:hover{
-    transform: translate3d(0, -1px, 0);
-    -webkit-transform: translate3d(0,-1px,0);
-    transform: translate3d(0,-1px,0);
+    /*
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    */
     box-shadow: 2px 16px 32px 0 rgba(0,0,0,.2);
     -webkit-box-shadow: 2px 16px 32px 0 rgba(0,0,0,.2);
     background: rgb(252, 252, 252);
@@ -181,8 +183,8 @@
 
   .post_entry-module{
     padding-bottom: 24px;
-    background-image: linear-gradient(to top, rgba(255, 175, 189, 0.05) 0%, rgba(255, 195, 160, 0.0) 90%);
-    z-index: 1;
+    background-image: linear-gradient(to top, rgba(142, 102, 119, 0.05) 0%, rgba(255, 175, 189, 0) 90%);
+    z-index: 3;
   }
 
   .post_entry-module::after{
@@ -191,16 +193,16 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 33%;
+    height: 50%;
     opacity: 0.4;
-    z-index: 2;
+    z-index: -2;
     transition: opacity .3s linear;
-    background-image: linear-gradient(to top, rgba(255, 175, 189, 0.1) 10%, rgba(255, 195, 160, 0.0) 90%);
+    background-image: linear-gradient(to top, rgba(142, 102, 119, 0.1) 0%, rgba(255, 175, 189, 0) 90%);
   }
 
   div.post_entry-header_info span {
     position: relative;
-    z-index: 3;
+    z-index: -1;
   }
 
   .post_entry-module:hover::after{
@@ -216,6 +218,7 @@
   #post-content, #post-content p{
     font-size: 1.3rem;
     line-height: 1.5;
+    text-align: justify;
   }
 
   #scheme-Isolation .post_entry-tags-list-item{
@@ -243,7 +246,6 @@
   li.post_entry-tags-list-item,
   li.post_entry-tags-list-item a{
     transition: all .3s linear;
-    transition-delay: 0.1s;
   }
 
   .post_entry-tags-list-item:hover a {
@@ -263,7 +265,7 @@
     background-size: 200% auto;
     padding: 1rem 3rem 1rem 3rem;
     text-align: center;
-    color:  #8e6677;
+    color:  rgba(142, 102, 119, 0.8);
     transition: all .3s linear;
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
@@ -273,15 +275,15 @@
   }
 
   .git-button:hover {
-    background-image: -webkit-gradient(linear, left top, right top, from(#618099), color-stop(51%, #8e6677), to(#618099));
-    background-image: linear-gradient(to right, #618099 0%, #8e66177 51%, #618099 100%);
-    background-color: #8e6677;
+    background-image: linear-gradient(to right, rgba(107, 79, 187, 0.4) 0%, rgba(142, 102, 119, 1) 51%, rgba(107, 79, 187, 0.4) 100%);
+    background-color: rgba(142, 102, 119, 1);
     color: white;
     border: 1px solid transparent;
   }
 
   .button-wrapper{
-    padding-bottom: 1pc;
+    padding-top: 1.5pc;
+    padding-bottom: 0pc;
     z-index:-1;
   }
 
@@ -306,6 +308,13 @@
     font-size: 1.1rem;
   }
 
+  @media screen and (min-width:1183px){
+     .post_entry-content,
+     .post_entry-footer{
+      padding-left: 3pc !important;
+      padding-right: 3pc !important;
+    }
+  }
 
 
 
