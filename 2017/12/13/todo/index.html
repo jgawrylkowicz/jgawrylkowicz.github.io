@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            To-Do List | 
+        
+        Jakub Gawrylkowicz
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="This project was a part of a university assignment, in which we had to create a web-based application in groups following the microservice architectural style. The whole system consisted of four independent microservices. I was responsible for the front-end user interface. We were free to use any technology stack we wanted, so I decided to use the MEAN (Mongo, Express, Angular, Node ) stack throughout the entire project. ">
+    <meta name="keywords" content=",Javascript,Distributed Systems">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+        
+            <link rel="stylesheet" href="/css/fontawesome.min.css">
+        
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Colfax Regular, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #222;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: rgb(107, 79, 187) !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: rgb(107, 79, 187) !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: rgb(107, 79, 187) !important;
+  }
+
+  .toTop {
+    background: #222 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #222;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #222;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #222;
+  }
+
+  .post-toc a:hover {
+    color: #222;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: ;
+        background-image: linear-gradient(120deg, rgba(41,50,60, 0.1) 0%, rgba(72,85,99,0.4) 100%);
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        -webkit-transition: all 300ms linear;
+        transition: all 300ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Colfax Fonts -->
+<style>
+  @font-face {
+    font-family: 'Colfax Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Colfax Black'), url('/fonts/Colfax-Black.woff') format('woff');
+  }
+
+
+  @font-face {
+    font-family: 'Colfax Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Colfax Light'), url('/fonts/Colfax-Light.woff') format('woff');
+  }
+
+
+  @font-face {
+    font-family: 'Colfax Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Colfax Medium'), url('/fonts/Colfax-Medium.woff') format('woff');
+  }
+
+
+  @font-face {
+    font-family: 'Colfax Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Colfax Regular'), url('/fonts/Colfax-Regular.woff') format('woff');
+  }
+
+
+  @font-face {
+    font-family: 'Colfax Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Colfax Thin'), url('/fonts/Colfax-Thin.woff') format('woff');
+  }
+
+  /*
+  @font-face {
+    font-family: 'Colfax Black Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Colfax Black Italic'), url('Colfax-BlackItalic.woff') format('woff');
+  }
+
+
+  @font-face {
+    font-family: 'Colfax Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Colfax Bold'), url('Colfax-Bold.woff') format('woff');
+  }
+
+
+  @font-face {
+    font-family: 'Colfax Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Colfax Bold Italic'), url('Colfax-BoldItalic.woff') format('woff');
+  }
+
+
+  @font-face {
+    font-family: 'Colfax Light Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Colfax Light Italic'), url('Colfax-LightItalic.woff') format('woff');
+  }
+
+
+  @font-face {
+    font-family: 'Colfax Medium Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Colfax Medium Italic'), url('Colfax-MediumItalic.woff') format('woff');
+  }
+
+
+  @font-face {
+    font-family: 'Colfax Regular Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Colfax Regular Italic'), url('Colfax-RegularItalic.woff') format('woff');
+  }
+
+
+  @font-face {
+    font-family: 'Colfax Thin Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Colfax Thin Italic'), url('Colfax-ThinItalic.woff') format('woff');
+  } */
+</style>
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+<!-- Other settings !-->
+<style>
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  .header-title,
+  .header-nav,
+  .header-sns_list,
+  .header-item,
+  .post_entry-module,
+  .avatar-image {
+    margin-bottom: 1.5pc !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  .header-nav *,
+  .header-sns_list *,
+  .header-item{
+    border: none !important;
+  }
+  .post_entry-title {
+    margin-bottom: 0 !important;
+  }
+
+  .header-slogan {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  .header-title,
+  .post_entry-title,
+  .header-nav,
+  .header-sns_list{
+    font-size: 2rem !important;
+    font-family: Colfax Medium;
+  }
+
+  .header{
+    padding-top: 4pc !important;
+    margin-bottom: 0 !important;
+  }
+
+
+  #scheme-Isolation .post_entry-module {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+    background: rgb(247, 247, 247);
+  }
+  #scheme-Isolation .material-post .mdl-card {
+    border-radius: 12px;
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,.2) ;
+
+  }
+
+  #scheme-Isolation .post_entry-module:hover{
+    box-shadow: 2px 16px 32px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: 2px 16px 32px 0 rgba(0,0,0,.2);
+    background: rgb(252, 252, 252);
+    cursor: pointer;
+  }
+
+  .post_entry-module{
+    background-image: linear-gradient(to top, rgba(142, 102, 119, 0.05) 0%, rgba(255, 175, 189, 0) 90%);
+    z-index: 3;
+  }
+
+  .post_entry-module::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    opacity: 0.4;
+    z-index: -2;
+    transition: opacity .3s linear;
+    background-image: linear-gradient(to top, rgba(142, 102, 119, 0.1) 0%, rgba(255, 175, 189, 0) 90%);
+  }
+
+  div.post_entry-header_info span {
+    position: relative;
+    z-index: -1;
+  }
+
+  .post_entry-module:hover::after{
+    opacity: 1;
+  }
+
+
+  #scheme-Isolation .post_entry-excerpt,
+  .post-content, .post-content p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  #scheme-Isolation .post_entry-tags-list-item{
+    font-size: 1rem;
+  }
+
+
+  #scheme-Isolation .post-content_wrapper{
+    max-width: 100%;
+  }
+
+  .next-content, .prev-content{
+    font-size: 1.2rem;
+    font-family: Colfax Medium;
+  }
+
+  #scheme-Isolation .material-layout .material-post > .material-nav{
+    margin-top: 3pc;
+  }
+
+
+  li.post_entry-tags-list-item,
+  li.post_entry-tags-list-item a{
+    transition: all .3s linear;
+  }
+
+  .post_entry-tags-list-item:hover a {
+    color: rgba(0,0,0,0.4) !important;
+  }
+  .post_entry-tags-list-item:hover{
+      border-color: rgba(0,0,0,0.4) !important;
+  }
+
+  .git-button  {
+    border: 1px solid #8e6677;
+    border-image-slice: 3;
+    font-family: Colfax Medium;
+    font-size: 1.2rem;
+    background: transparent;
+    border-radius: 6px;
+    background-size: 200% auto;
+    padding: 1rem 3rem 1rem 3rem;
+    text-align: center;
+    color:  rgba(142, 102, 119, 0.8);
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    text-decoration: none;
+
+  }
+
+  .git-button:hover {
+    background-image: linear-gradient(to right, rgba(107, 79, 187, 0.4) 0%, rgba(142, 102, 119, 1) 51%, rgba(107, 79, 187, 0.4) 100%);
+    background-color: rgba(142, 102, 119, 1);
+    color: white;
+    border: 1px solid transparent;
+  }
+
+  .button-wrapper{
+    padding-top: 1.5pc;
+    padding-bottom: 0pc;
+    z-index:-1;
+  }
+
+  div.post_thumbnail-custom{
+      /*
+      z-index: 10;
+      -webkit-mask-image:-webkit-gradient(
+      linear, left top, left bottom,
+      color-stop(0,  rgba(0,0,0,1)),
+      color-stop(.6,  rgba(0,0,0,8)),
+      color-stop(1,  rgba(0,0,0,0)));
+      */
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  div.post_entry-header_info{
+    padding-bottom: 2pc;
+  }
+  .post_date{
+    font-family: Colfax Regular;
+    font-size: 1.2rem;
+  }
+
+  .avatar-image{
+    width: 100% !important;
+  }
+
+  .avatar-image img{
+    display: block;
+    margin: auto;
+    width: auto;
+    height: auto;
+    max-width: 150px;
+    border: 1px solid rgba(0, 0, 0, .05);
+    border-radius: 200px;
+  }
+
+  i.fa.fa-envelope{
+    padding-right: 7px;
+  }
+  i.fa.fa-map-marker{
+    padding-right: 10px;
+    padding-left: 3px;
+  }
+
+  i.fa.fa-gitlab{
+    padding-left: 3px;
+  }
+
+  @media screen and (min-width:1183px){
+     .post_entry-content,
+     .post_entry-footer{
+      padding-left: 3pc !important;
+      padding-right: 3pc !important;
+    }
+  }
+
+
+
+
+
+
+
+</style>
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Jakub Gawrylkowicz">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2017/12/13/todo/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Jakub Gawrylkowicz">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2017/12/13/todo/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="To-Do List | Jakub Gawrylkowicz">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="This project was a part of a university assignment, in which we had to create a web-based application in groups following the microservice architectural style. The whole system consisted of four independent microservices. I was responsible for the front-end user interface. We were free to use any technology stack we wanted, so I decided to use the MEAN (Mongo, Express, Angular, Node ) stack throughout the entire project. ">
+    <meta property="og:article:tag" content="Javascript"> <meta property="og:article:tag" content="Distributed Systems"> 
+
+    
+        <meta property="article:published_time" content="Wed Dec 13 2017 14:27:14 GMT+0000">
+        <meta property="article:modified_time" content="Sun Dec 17 2017 18:07:31 GMT+0100">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2017/12/13/todo/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2017/12/13/todo/index.html",
+    "headline": "To-Do List",
+    "datePublished": "Wed Dec 13 2017 14:27:14 GMT+0000",
+    "dateModified": "Sun Dec 17 2017 18:07:31 GMT+0100",
+    "author": {
+        "@type": "Person",
+        "name": "Jakub Gawrylkowicz",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": ""
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Jakub Gawrylkowicz",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Javascript,Distributed Systems",
+    "description": "This project was a part of a university assignment, in which we had to create a web-based application in groups following the microservice architectural style. The whole system consisted of four independent microservices. I was responsible for the front-end user interface. We were free to use any technology stack we wanted, so I decided to use the MEAN (Mongo, Express, Angular, Node ) stack throughout the entire project. ",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Isolation" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+                    <!-- Isolation Header -->
+                    <header class="header">
+    <div class="header-wrapper">
+        <!-- Header Copyright -->
+        
+
+        
+        <div class="header-item avatar-image">
+            <img src="/img/avatar.png" alt="Jakub Gawrylkowicz's avatar">
+        </div>
+        
+
+        <!-- Header Title -->
+        <span class="header-title header-item">
+            <a href="/" title="Jakub Gawrylkowicz">
+                Jakub Gawrylkowicz
+            </a>
+
+        </span>
+
+        <p class="header-slogan header-item">
+          
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            Vienna, Austria
+          
+          <br>
+          
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            jgawrylkowicz@gmail.com
+          
+        </p>
+
+
+
+
+
+        <p class="header-slogan header-item">
+        
+            
+                Hello, nice to meet you!<br>I am a computer science student at the University of Vienna. I find web technologies very fascinating and aspire to work as a full-stack developer. Here you can find some projects that I've been working on.
+            
+        
+        </p>
+
+        <!-- Header Nav -->
+        <nav class="header-nav header-item">
+            <span class="header-nav-item">
+                <a href="/" title="Home">
+                    <span>Home</span>
+                </a>
+            </span>
+
+            <!-- Pages  -->
+            
+
+        </nav>
+
+        <!-- Header SNS -->
+        <div class="header-item header-sns_list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+    </div>
+</header>
+
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+
+                    <!-- Post TOC -->
+
+    
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+
+
+    <!-- Isolation Post Header -->
+    <!-- Post thumbnail -->
+    
+        <!-- Post Header Info -->
+        <div class="post-header_info with-thumbnail">
+
+        </div>
+
+        <!-- Custom thumbnail -->
+        <div class="post_thumbnail-custom">
+            <img src="/img/todo.png">
+    
+        </div>
+
+
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-card__supporting-text fade out">
+    
+
+    
+        <div class="post-content_wrapper">
+            <p>This project was a part of a university assignment, in which we had to create a web-based application in groups following the microservice architectural style. The whole system consisted of four independent microservices. I was responsible for the front-end user interface. We were free to use any technology stack we wanted, so I decided to use the MEAN (Mongo, Express, Angular, Node ) stack throughout the entire project. </p>
+<a id="more"></a>
+<p> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+            
+        </div>
+    
+
+</div>
+
+<div class="post_entry-footer">
+
+    <div class="post_entry-footer-info">
+          <!-- Post Tags -->
+          <ul class="post_entry-tags-list"><li class="post_entry-tags-list-item"><a class="post_entry-tags-list-link" href="/tags/Distributed-Systems/">Distributed Systems</a></li><li class="post_entry-tags-list-item"><a class="post_entry-tags-list-link" href="/tags/Javascript/">Javascript</a></li></ul>
+    </div>
+</div>
+
+
+                
+                    <!-- Paradox Post Info -->
+                    
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/06/22/spotter/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': 'rgba(107, 79, 187, 0.8)'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px rgba(107, 79, 187, 0.8), 0 0 15px rgba(107, 79, 187, 0.8)'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': 'rgba(107, 79, 187, 0.8)',
+        'border-left-color': 'rgba(107, 79, 187, 0.8)'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 300);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
