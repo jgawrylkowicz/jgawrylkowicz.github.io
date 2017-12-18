@@ -31,15 +31,21 @@ url:
 # scheme: Paradox
 scheme: Isolation
 
+header:
+      slogan:
+        - "Hello, nice to meet you!"
+        - "I am a computer science student at the University of Vienna. I find web technologies very fascinating and aspire to work as a full-stack developer. Here you can find some projects that I've been working on."
+      location: Vienna, Austria
+      email: jgawrylkowicz@gmail.com
+
 # UI & UX: slogan, color, effect
 uiux:
-    slogan: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-    theme_color: "#222"
+    theme_color: "rgb(107, 79, 187)"
     theme_sub_color: "#222"
     hyperlink_color: "#222"
     button_color: "#222"
     android_chrome_color: "#0097A7"
-    nprogress_color: "#111"
+    nprogress_color: "rgba(107, 79, 187, 0.8)"
     nprogress_buffer: "300"
     radius: "12px"
     post_shadow: "0 4px 8px 0 rgba(0,0,0,.2)"
@@ -77,7 +83,7 @@ img:
     logo: "/img/logo.png"
     avatar: "/img/avatar.png"
     daily_pic: "/img/daily_pic.png"
-    sidebar_header: "/img/sidebar_header.png"
+    sidebar_header: "/img/avatar.png"
     footer_image:
         #upyun_logo:
             #link: "https://www.upyun.com/"
@@ -161,7 +167,7 @@ toc:
 
 # SNS Menu
 sns:
-    email: youremail@email.com
+    email: jgawrylkowicz@gmail.com
     facebook: "https://www.facebook.com/facebook"
     twitter: "https://twitter.com/twitter"
     googleplus: "https://www.google.com/"

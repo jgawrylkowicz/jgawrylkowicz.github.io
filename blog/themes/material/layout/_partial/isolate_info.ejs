@@ -11,13 +11,13 @@
                 </script>
                 &nbsp;<%- config.title %>
             </div>
-            <!--
+            /*
             I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
             It will not impact the appearance and can give developers a lot of support :)
 
             很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
             它不会影响美观并可以给开发者很大的支持。 :)
-            -->
+            */
             <div>
                 Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a>
                 <br>
@@ -26,19 +26,42 @@
         </div>
         <% } %>
 
+        <% if(theme.img.avatar) { %>
+        <div class="header-item avatar-image">
+            <img src="<%= url_for(theme.img.avatar) %>" alt="<%= config.author %>'s avatar">
+        </div>
+        <% } %>
+
         <!-- Header Title -->
         <span class="header-title header-item">
             <a href="<%= config.root %>" title="<%= config.title %>">
                 <%= config.title %>
             </a>
+
         </span>
 
         <p class="header-slogan header-item">
-        <% if(theme.uiux.slogan) { %>
-            <% if(Array.isArray(theme.uiux.slogan)) { %>
-                <%- theme.uiux.slogan.join('<br>') %>
+          <% if(theme.header.location) { %>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <%- theme.header.location %>
+          <% } %>
+          <br>
+          <% if(theme.header.email) { %>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <%- theme.header.email %>
+          <% } %>
+        </p>
+
+
+
+
+
+        <p class="header-slogan header-item">
+        <% if(theme.header.slogan) { %>
+            <% if(Array.isArray(theme.header.slogan)) { %>
+                <%- theme.header.slogan.join('<br>') %>
             <% } else { %>
-                <%- theme.uiux.slogan %>
+                <%- theme.header.slogan %>
             <% } %>
         <% } %>
         </p>

@@ -8,7 +8,7 @@
             <img src="<%= post.thumbnail %>">
         </div>
     <% } %>
-    
+
     <!-- Post_entry Content -->
     <div class="post_entry-content mdl-card__supporting-text">
 
@@ -16,9 +16,10 @@
             <p class="post_entry-title">
                 <a href="<%= url_for(post.path) %>"><% if(pin) { %><span>[Top]</span><% } %><%= post.title %></a>
             </p>
-            <div class="post_date">
-            <%= date(post.date, 'MMM DD, YYYY') %>
-            </div>
+            <span class="post_date">
+              <%= date(post.date, 'MMM DD, YYYY') %>
+            </span>
+
         </div>
 
 
