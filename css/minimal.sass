@@ -1,0 +1,177 @@
+$container-max-width: 50em
+
+$line-height: 1.5
+$min_width: 320px
+$max_width: 1600px
+$min_font: 13px
+$max_font: 16px
+$mod_1: 1.2 // mobile
+$mod_2: 1.5 // desktop
+$break-s: 600px
+$break-l: $break-s * 2
+$easing-function: cubic-bezier(0.23, 1, 0.32, 1)
+
+
+@function pow($number, $exponent) 
+  $value: 1
+  @if $exponent > 0 
+    @for $i from 1 through $exponent 
+      $value:  $value * $number
+  @return $value
+
+@function strip-unit($value) 
+  @return $value / ($value * 0 + 1)
+
+=fluid-type($property, $min-vw, $max-vw, $min-font-size, $max-font-size) 
+  $u1: unit($min-vw)
+  $u2: unit($max-vw)
+  $u3: unit($min-font-size)
+  $u4: unit($max-font-size)
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 
+    & 
+      #{$property}: $min-font-size
+      @media screen and (min-width: $min-vw) 
+        #{$property}: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}))
+      
+      @media screen and (min-width: $max-vw) 
+        #{$property}: $max-font-size
+
+
+\:root 
+  --color-bg: #282a36
+  --color-text: #eee
+  --color-red: #ff5555
+  --color-green: #50fa7b
+
+.red
+  color: var(--color-red)
+.green
+  color: var(--color-green)
+
+
+/* Reset Styles
+*, :after, :before
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+
+html
+  -ms-touch-action: manipulation
+  line-height: $line-height
+  display: block
+  height: 100%
+  width: 100%
+  touch-action: manipulation
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+a
+  text-decoration: none
+  text-transform: none
+  color: #4A90E2
+
+body
+  font-family: 'Open Sans', sans-serif;
+  text-rendering: optimizeLegibility
+  +fluid-type('font-size', $min_width, $max_width, $min_font, $max_font)
+  color: #04143A
+  margin: 0
+  padding: 2rem
+  text-rendering: optimizeLegibility
+  background-color: #3C4556
+  background-attachment: fixed
+  background-size: cover
+  width: 100%
+  min-height: 100vh
+  display: -webkit-box; display: -ms-flexbox; display: flex
+  -webkit-box-align: center; -ms-flex-align: center; align-items: center
+  -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale
+
+a
+	text-decoration: none
+	text-transform: none
+	color: #4A90E2
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote
+  &:before, &:after
+    content: ''
+    content: none
+
+q
+  &:before, &:after
+    content: ''
+    content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+p
+  color: #15171a
+  font-size: 1em
+  line-height: $line-height
+
+strong
+  font-weight: 600
+  
+div, footer
+  box-sizing: border-box
+
+// fluid responsiveness  
+h1
+  +fluid-type('font-size', $min_width, $max_width, pow($mod_1, 4) *$min_font, pow($mod_2, 4) *$max_font)
+  letter-spacing: -1.5px
+  line-height: 1.2
+h2
+  +fluid-type('font-size', $min_width, $max_width, pow($mod_1, 3) *$min_font, pow($mod_2, 3) *$max_font)
+  letter-spacing: -0.5px
+  line-height: 1.2
+h3
+  +fluid-type('font-size', $min_width, $max_width, pow($mod_1, 2) *$min_font, pow($mod_2, 2) *$max_font)
+  letter-spacing: 0px
+h4
+  +fluid-type('font-size', $min_width, $max_width, pow($mod_1, 1) *$min_font, pow($mod_2, 1) *$max_font)
+  letter-spacing: 0.25px
+p
+  +fluid-type('font-size', $min_width, $max_width, $min_font, $max_font)
+  letter-spacing: 0.5px
+
+/* Reset ends
+//+fluid-type('grid-gap', $min_width, $max_width, 32px,64px) 
+
+/*Hero section
+.layout
+  //display: grid
+  //justify-content: center
+  //align-content: center
